@@ -19,7 +19,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-6 md:px-12 py-8 flex justify-between items-start pointer-events-none">
+    <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-4 md:py-8 flex justify-between items-start pointer-events-none transition-all duration-300">
       
       {/* Left Island: Logo/Home - Expands on Hover OR Scroll */}
       <div 
@@ -42,14 +42,14 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
       <div className="pointer-events-auto bg-[#F3F3F3] rounded-2xl p-2 flex items-center gap-2 shadow-sm">
         <button 
           onClick={onMenuClick}
-          className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-white transition-colors hover:scale-105 duration-200 active:scale-95"
+          className="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-white transition-colors hover:scale-105 duration-200 active:scale-95 bg-white md:bg-transparent"
           aria-label="Menu"
         >
-          <MenuIcon className="w-4 h-4 text-eddie-dark" />
+          <MenuIcon className="w-5 h-5 text-eddie-dark" />
         </button>
         <button 
           onClick={() => onNavigate && onNavigate('pricing')}
-          className="bg-black text-white text-sm font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform duration-200 shadow-md"
+          className="hidden md:block bg-black text-white text-sm font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform duration-200 shadow-md"
         >
           Start Project
         </button>
