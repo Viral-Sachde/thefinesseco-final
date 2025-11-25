@@ -10,9 +10,13 @@ import { FAQ } from './components/FAQ';
 import { Footer } from './components/Footer';
 import { CaseStudies } from './components/CaseStudies';
 import { Careers } from './components/Careers';
-import { SparkleIcon, PaletteIcon, CodeIcon, RocketIcon } from './components/Icons';
+import { SparkleIcon } from './components/Icons';
+import { Process } from './components/Process';
+import { Testimonials } from './components/Testimonials';
+import { Founders } from './components/Founders';
+import { VideoShowcase } from './components/VideoShowcase';
 
-export type SectionId = 'home' | 'services' | 'agency' | 'pricing' | 'faq' | 'cases' | 'careers';
+export type SectionId = 'home' | 'services' | 'agency' | 'pricing' | 'faq' | 'cases' | 'careers' | 'process' | 'founders';
 
 const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,43 +68,56 @@ const App: React.FC = () => {
                 <span>Obsessed.</span>
               </h1>
 
-              {/* Badges */}
-              <div className="flex flex-wrap gap-3 md:gap-4 justify-center mb-12">
-                <div className="group cursor-default flex items-center gap-2 bg-[#E0DEFA] hover:bg-[#d0cefa] text-eddie-dark px-5 py-3 rounded-2xl font-bold text-sm md:text-base transition-colors duration-300">
-                   <PaletteIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                   <span>Vibe Checks</span>
-                </div>
-                <div className="group cursor-default flex items-center gap-2 bg-[#E3F2FD] hover:bg-[#d3eafd] text-eddie-dark px-5 py-3 rounded-2xl font-bold text-sm md:text-base transition-colors duration-300">
-                   <RocketIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                   <span>Growth Hacking</span>
-                </div>
-                <div className="group cursor-default flex items-center gap-2 bg-[#F9FCD0] hover:bg-[#f0f5b8] text-eddie-dark px-5 py-3 rounded-2xl font-bold text-sm md:text-base transition-colors duration-300">
-                   <CodeIcon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                   <span>No-Code & Code</span>
-                </div>
+              {/* Text Chain Badges */}
+              <div className="flex flex-wrap gap-4 md:gap-6 justify-center mb-12 items-center text-lg md:text-xl font-bold tracking-tight text-eddie-dark">
+                <span className="opacity-40">Noise.</span>
+                <span className="text-gray-300">→</span>
+                <span className="opacity-60">Focus.</span>
+                <span className="text-gray-300">→</span>
+                <span className="opacity-80">Execute.</span>
+                <span className="text-gray-300">→</span>
+                <span className="text-eddie-purple">Impact.</span>
               </div>
 
               {/* Hero Card */}
               <HeroCard onClick={() => scrollToSection('services')} />
             </div>
 
-            {/* Social Proof */}
+            {/* Video Showcase */}
+            <VideoShowcase />
+
+            {/* Social Proof Stats */}
             <BentoGrid />
         </div>
 
-        {/* Feature Teaser */}
+        {/* Feature Teaser (Pretty vs Profitable) */}
         <section id="agency">
             <FeatureSection />
-        </section>
-
-        {/* Case Studies */}
-        <section id="cases">
-            <CaseStudies />
         </section>
 
         {/* Services */}
         <section id="services">
             <Services />
+        </section>
+
+        {/* Process */}
+        <section id="process">
+            <Process />
+        </section>
+
+        {/* Founders / Vision (Moved Lower) */}
+        <section id="founders">
+            <Founders />
+        </section>
+
+        {/* Testimonials */}
+        <section id="testimonials">
+            <Testimonials />
+        </section>
+
+        {/* Case Studies */}
+        <section id="cases">
+            <CaseStudies />
         </section>
 
         {/* Pricing */}

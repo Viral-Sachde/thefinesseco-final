@@ -51,7 +51,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
           onClick={() => onNavigate && onNavigate('pricing')}
           className="hidden md:block bg-black text-white text-sm font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform duration-200 shadow-md"
         >
-          Start Project
+          Book a Call
         </button>
       </div>
     </header>

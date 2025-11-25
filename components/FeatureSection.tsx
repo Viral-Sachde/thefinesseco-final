@@ -1,48 +1,73 @@
 import React from 'react';
+import { ArrowRightIcon, CheckIcon, CloseIcon } from './Icons';
 
 export const FeatureSection: React.FC = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 mt-8 mb-8 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-      <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+    <div className="w-full max-w-6xl mx-auto px-4 mt-16 mb-24 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+      
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-7xl font-bold tracking-tighter mb-6">
+          The Unfair Advantage.
+        </h2>
+        <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+          Most agencies build websites. We build revenue engines.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8">
         
-        {/* Left Image Section */}
-        <div className="w-full lg:w-1/2">
-          <div className="relative aspect-square w-full bg-[#F4F4F4] rounded-[2.5rem] overflow-hidden flex items-center justify-center group hover:scale-[1.02] transition-transform duration-500">
-            {/* 3D Object Representation */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 perspective-1000">
-              <div className="absolute inset-0 bg-eddie-lime rounded-full transform scale-90 shadow-2xl transition-all duration-700 group-hover:scale-100 group-hover:rotate-180 bg-gradient-to-tr from-eddie-lime to-[#eefcb3]">
-                 <div className="absolute inset-8 bg-white/30 backdrop-blur-xl rounded-full"></div>
-              </div>
-              {/* Highlight */}
-              <div className="absolute top-10 right-20 w-32 h-32 bg-white/40 blur-2xl rounded-full"></div>
-              
-              {/* Floating Badge */}
-               <div className="absolute bottom-10 -left-4 bg-white px-6 py-3 rounded-xl shadow-lg transform rotate-6 group-hover:rotate-0 transition-transform">
-                  <span className="font-bold text-eddie-dark">Pixel Perfect</span>
-               </div>
-            </div>
-          </div>
+        {/* The Old Way (Left) */}
+        <div className="bg-gray-100 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
+           <div className="absolute top-8 right-8 text-gray-400">
+             <span className="text-sm font-bold uppercase tracking-wide line-through decoration-red-500 decoration-2">The Old Way</span>
+           </div>
+           
+           <h3 className="text-3xl font-bold text-gray-400 mb-8 line-through decoration-gray-400/50">"Pretty" Websites</h3>
+           
+           <ul className="space-y-4">
+             {['Confusing Navigation', 'Slow Load Times', 'Zero SEO Strategy', 'Looks Good, Sells Nothing'].map((item, i) => (
+               <li key={i} className="flex items-center gap-4 text-gray-400 font-medium">
+                  <div className="w-6 h-6 rounded-full border border-gray-300 flex items-center justify-center shrink-0">
+                    <CloseIcon className="w-3 h-3" />
+                  </div>
+                  <span className="line-through">{item}</span>
+               </li>
+             ))}
+           </ul>
         </div>
 
-        {/* Right Content Section */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start gap-6 lg:pl-4">
-          <div className="bg-[#E3F2FD] text-eddie-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide">
-            Strategy
-          </div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-eddie-dark leading-[1.1] tracking-tight">
-            Refining your<br />
-            Brand Identity<br />
-            & Presence
-          </h2>
-          
-          <p className="text-lg text-gray-600 font-medium leading-relaxed max-w-md">
-            In a crowded digital landscape, standing out is essential. The Finesse Co. blends data-driven strategy with bespoke aesthetics to ensure your brand resonates, engages, and converts across all touchpoints.
-          </p>
+        {/* The Finesse Way (Right) */}
+        <div className="bg-eddie-lavender text-eddie-dark rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden transform md:-translate-y-8 shadow-2xl">
+           <div className="absolute top-0 right-0 p-8">
+             <div className="bg-white text-eddie-dark px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide shadow-sm">
+               The Finesse Way
+             </div>
+           </div>
+           
+           <h3 className="text-3xl font-bold text-eddie-dark mb-8">Profitable Systems</h3>
+           
+           <ul className="space-y-6">
+             {[
+               { text: 'Psychology-Driven UX', sub: 'We guide users to buy.' },
+               { text: 'Performance First', sub: '99/100 Google PageSpeed.' },
+               { text: 'SEO Domination', sub: 'Rank #1 for keywords that matter.' },
+               { text: 'Brand Cultivation', sub: 'Visuals that people tattoo on themselves.' }
+             ].map((item, i) => (
+               <li key={i} className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center shrink-0 mt-1 shadow-sm">
+                    <CheckIcon className="w-3 h-3 text-eddie-dark" />
+                  </div>
+                  <div>
+                    <span className="font-bold text-lg block">{item.text}</span>
+                    <span className="text-sm text-eddie-dark/70 font-medium">{item.sub}</span>
+                  </div>
+               </li>
+             ))}
+           </ul>
 
-          <button className="bg-black text-white px-8 py-4 rounded-full font-bold text-sm hover:scale-105 transition-transform duration-200 shadow-lg mt-2">
-            Explore Strategy
-          </button>
+           <button className="mt-12 w-full bg-eddie-dark text-white py-4 rounded-xl font-bold hover:scale-[1.02] transition-transform flex items-center justify-center gap-2 shadow-lg">
+             Switch to Finesse <ArrowRightIcon className="w-4 h-4" />
+           </button>
         </div>
 
       </div>

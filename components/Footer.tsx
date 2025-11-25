@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     onClick={() => onNavigate('pricing')}
                     className="bg-eddie-dark text-white px-8 py-4 rounded-2xl font-bold hover:bg-gray-800 transition-colors hover:scale-105 duration-200 shadow-lg"
                  >
-                   Start a Project
+                   Book a Call
                  </button>
                  <button className="bg-gray-50 border border-gray-200 text-eddie-dark px-8 py-4 rounded-2xl font-bold hover:bg-gray-100 transition-colors shadow-sm">
                    view@finesse.co
@@ -49,9 +49,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="flex flex-col gap-6">
                 <h4 className="font-bold text-gray-400 uppercase text-xs tracking-wider">Company</h4>
                 <button onClick={() => onNavigate('services')} className="text-left font-bold hover:text-eddie-purple transition-colors">Services</button>
-                <button onClick={() => onNavigate('agency')} className="text-left font-bold hover:text-eddie-purple transition-colors">Agency</button>
+                <button onClick={() => onNavigate('process')} className="text-left font-bold hover:text-eddie-purple transition-colors">Process</button>
+                <button onClick={() => onNavigate('founders')} className="text-left font-bold hover:text-eddie-purple transition-colors">Vision</button>
                 <button onClick={() => onNavigate('careers')} className="text-left font-bold hover:text-eddie-purple transition-colors">Careers</button>
-                <button onClick={() => onNavigate('pricing')} className="text-left font-bold hover:text-eddie-purple transition-colors">Contact</button>
               </div>
             </div>
           </div>

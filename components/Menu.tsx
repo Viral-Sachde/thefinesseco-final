@@ -41,7 +41,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
             onClick={() => handleLinkClick('pricing')}
             className="bg-eddie-dark text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-bold text-xs md:text-sm hover:scale-105 transition-transform duration-200"
           >
-            Start Project
+            Book a Call
           </button>
         </div>
 
@@ -53,6 +53,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
             <ul className="space-y-2 md:space-y-3">
               {[
                 { label: 'Services', value: 'services' },
+                { label: 'Process', value: 'process' },
                 { label: 'Case Studies', value: 'cases' },
                 { label: 'Pricing', value: 'pricing' },
                 { label: 'FAQ', value: 'faq' }
@@ -72,7 +73,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
             <h4 className="text-[#9CA3AF] text-lg md:text-xl font-medium mb-4 md:mb-6">Agency</h4>
             <ul className="space-y-2 md:space-y-3">
               {[
-                  { label: 'About Us', value: 'agency' },
+                  { label: 'Vision', value: 'founders' },
                   { label: 'Careers', value: 'careers' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer py-1">
