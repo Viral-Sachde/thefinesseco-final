@@ -44,11 +44,11 @@ export const Services: React.FC = () => {
             key={idx} 
             className={`
               ${service.color} rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[350px]
-              group transition-all duration-300 hover:scale-[1.02] hover:shadow-xl cursor-default
+              group transition-all duration-500 hover:scale-[1.02] hover:shadow-xl cursor-pointer hover:-rotate-1
             `}
           >
             <div>
-              <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-white/80 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm">
                 {service.icon}
               </div>
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
@@ -58,7 +58,7 @@ export const Services: React.FC = () => {
             </div>
             
             <div className="mt-8 flex items-center gap-2 font-bold text-sm opacity-60 group-hover:opacity-100 group-hover:gap-4 transition-all">
-              <span>Learn More</span>
+              <span>View Details</span>
               <ArrowRightIcon className="w-4 h-4" />
             </div>
           </div>

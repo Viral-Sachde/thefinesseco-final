@@ -10,17 +10,19 @@ const FAQItem: React.FC<{ question: string; answer: string }> = ({ question, ans
         onClick={() => setIsOpen(!isOpen)}
         className="w-full py-8 flex items-center justify-between text-left group"
       >
-        <span className="text-2xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors">{question}</span>
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-eddie-dark text-white' : 'bg-gray-100 text-eddie-dark'}`}>
+        <span className="text-xl md:text-2xl font-bold text-eddie-dark group-hover:text-eddie-purple transition-colors duration-300 pr-8">{question}</span>
+        <div className={`shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${isOpen ? 'bg-eddie-purple text-white rotate-180' : 'bg-[#F4F4F4] text-eddie-dark group-hover:bg-[#EAE8E4]'}`}>
           {isOpen ? <MinusIcon className="w-5 h-5" /> : <PlusIcon className="w-5 h-5" />}
         </div>
       </button>
       <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mb-8' : 'max-h-0 opacity-0'}`}
+        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96 opacity-100 mb-8' : 'max-h-0 opacity-0'}`}
       >
-        <p className="text-lg text-gray-500 leading-relaxed font-medium max-w-3xl">
-          {answer}
-        </p>
+        <div className="bg-[#F9F9F9] p-6 rounded-2xl">
+          <p className="text-lg text-gray-500 leading-relaxed font-medium">
+            {answer}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -47,12 +49,12 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 py-12">
+    <div className="w-full max-w-5xl mx-auto px-4">
       <div className="mb-12">
         <span className="text-eddie-purple font-bold tracking-wider uppercase text-sm">Common Questions</span>
         <h2 className="text-4xl md:text-5xl font-bold mt-4">Frequently Asked</h2>
       </div>
-      <div>
+      <div className="bg-white rounded-[2.5rem] border border-gray-100 shadow-sm p-8">
         {faqs.map((faq, idx) => (
           <FAQItem key={idx} question={faq.question} answer={faq.answer} />
         ))}

@@ -4,10 +4,16 @@ import { CloseIcon, ArrowUpRightIcon } from './Icons';
 interface MenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onNavigate: (page: string) => void;
 }
 
-export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
+export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
   if (!isOpen) return null;
+
+  const handleLinkClick = (page: string) => {
+    onNavigate(page);
+    onClose();
+  };
 
   return (
     <div className="fixed inset-0 z-[60] flex justify-end items-start p-4 md:p-6">
@@ -31,42 +37,48 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
             <CloseIcon className="w-5 h-5 text-eddie-dark" />
           </button>
           
-          <button className="bg-black text-white px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform duration-200">
-            Let's Talk
+          <button 
+            onClick={() => handleLinkClick('pricing')}
+            className="bg-eddie-dark text-white px-6 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform duration-200"
+          >
+            Start Project
           </button>
         </div>
 
         {/* Scrollable Content */}
         <div className="flex-1 overflow-y-auto no-scrollbar pr-2">
-          {/* Services Section */}
+          {/* Explore Section */}
           <div className="mb-10">
             <h4 className="text-[#9CA3AF] text-xl font-medium mb-6">Explore</h4>
             <ul className="space-y-3">
               {[
-                { label: 'Services', href: '#services' },
-                { label: 'Our Process', href: '#about' },
-                { label: 'Pricing', href: '#pricing' },
-                { label: 'FAQ', href: '#faq' }
+                { label: 'Services', value: 'services' },
+                { label: 'Case Studies', value: 'cases' },
+                { label: 'Pricing', value: 'pricing' },
+                { label: 'FAQ', value: 'faq' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer flex items-center justify-between py-1">
-                  <a href={item.href} onClick={onClose} className="text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1">
+                  <button onClick={() => handleLinkClick(item.value)} className="text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
                     {item.label}
-                  </a>
+                  </button>
                   <ArrowUpRightIcon className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company Section */}
+          {/* Agency Section */}
           <div className="mb-10">
             <h4 className="text-[#9CA3AF] text-xl font-medium mb-6">Agency</h4>
             <ul className="space-y-3">
-              {['Case Studies', 'About Us', 'Careers'].map((item) => (
-                <li key={item} className="group cursor-pointer py-1">
-                  <span className="text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight">
-                    {item}
-                  </span>
+              {[
+                  { label: 'About Us', value: 'agency' },
+                  { label: 'Careers', value: 'careers' }
+              ].map((item) => (
+                <li key={item.label} className="group cursor-pointer py-1">
+                  <button onClick={() => handleLinkClick(item.value)} className="text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
+                    {item.label}
+                  </button>
                 </li>
               ))}
             </ul>
