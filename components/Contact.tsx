@@ -74,15 +74,15 @@ export const Contact: React.FC = () => {
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div className="p-6">
           <h3 className="font-bold text-lg mb-2">Email Us</h3>
-          <p className="text-gray-500 font-medium">hello@finesse.co</p>
+          <p className="text-gray-500 font-medium">hello@thefinesse.co</p>
         </div>
         <div className="p-6">
           <h3 className="font-bold text-lg mb-2">Call Us</h3>
-          <p className="text-gray-500 font-medium">+1 (555) 123-4567</p>
+          <p className="text-gray-500 font-medium">+91 9484991399</p>
         </div>
         <div className="p-6">
           <h3 className="font-bold text-lg mb-2">Visit Us</h3>
-          <p className="text-gray-500 font-medium">New York, NY (Remote First)</p>
+          <p className="text-gray-500 font-medium">Ahmedabad, GJ (Remote First)</p>
         </div>
       </div>
     </div>

@@ -1,4 +1,7 @@
+'use client'
+
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { CheckIcon, PlusIcon, StarIcon, ChevronDownIcon } from './Icons';
 
 type PricingCategory = 'Web' | 'App' | 'Branding';
@@ -99,15 +102,13 @@ export const Pricing: React.FC = () => {
         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">Choose the package that fits your stage of growth.</p>
         
         {/* Category Tabs - Scrollable on mobile */}
-        <div className="relative w-full flex justify-center">
-            {/* Removed Gradients to fix spacing visibility issue */}
-            
+        <div className="relative w-full flex justify-center px-4 md:px-0">
             <div className="inline-flex bg-gray-100 p-2 rounded-full mb-8 md:mb-12 relative overflow-x-auto max-w-full no-scrollbar snap-x">
                 {(['Web', 'App', 'Branding'] as PricingCategory[]).map((tab) => (
                     <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 z-10 whitespace-nowrap snap-center ${activeTab === tab ? 'bg-white text-eddie-dark shadow-md scale-105' : 'text-gray-500 hover:text-eddie-dark'}`}
+                    className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 z-10 whitespace-nowrap snap-center mx-1 ${activeTab === tab ? 'bg-white text-eddie-dark shadow-md scale-105' : 'text-gray-500 hover:text-eddie-dark'}`}
                     >
                     {tab === 'Web' ? 'Web Development' : tab === 'App' ? 'App / Software' : 'Branding & Growth'}
                     </button>
@@ -153,9 +154,9 @@ export const Pricing: React.FC = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <button className="w-full py-4 rounded-xl font-bold bg-eddie-dark text-white shadow-md">
+                            <Link href="/contact" className="block w-full py-4 rounded-xl font-bold bg-eddie-dark text-white shadow-md text-center hover:bg-gray-900 transition-colors">
                                 {plan.btnText}
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -189,16 +190,16 @@ export const Pricing: React.FC = () => {
               {plan.features.map(item => (
                 <li key={item} className="flex items-start gap-3">
                   <div className={`mt-1 rounded-full p-1 ${plan.textColor ? 'bg-white' : 'bg-white/50'}`}>
-                    <CheckIcon className={`w-3 h-3 ${plan.iconColor || 'text-eddie-dark'}`} />
+                    <CheckIcon className={`w-3 h-3 ${(plan as any).iconColor || 'text-eddie-dark'}`} />
                   </div>
                   <span className={`font-bold ${plan.textColor ? 'text-white' : 'text-eddie-dark/80'}`}>{item}</span>
                 </li>
               ))}
             </ul>
             
-            <button className={`w-full py-4 rounded-2xl font-bold transition-colors shadow-sm ${plan.textColor ? 'bg-white text-eddie-purple hover:bg-gray-50' : 'bg-white text-eddie-dark hover:bg-white/80'}`}>
+            <Link href="/contact" className={`block w-full py-4 rounded-2xl font-bold transition-colors shadow-sm text-center ${plan.textColor ? 'bg-white text-eddie-purple hover:bg-gray-50' : 'bg-white text-eddie-dark hover:bg-white/80'}`}>
               {plan.btnText}
-            </button>
+            </Link>
           </div>
         ))}
 

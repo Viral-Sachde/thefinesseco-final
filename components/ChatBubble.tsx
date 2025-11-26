@@ -1,2 +1,0 @@
-// ChatBubble component removed
-export {};

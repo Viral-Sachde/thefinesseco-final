@@ -3,10 +3,11 @@ import { ArrowRightIcon } from './Icons';
 
 export const Careers: React.FC = () => {
   const roles = [
-    { title: "Senior Product Designer", type: "Remote", dept: "Design" },
-    { title: "Frontend Engineer (React/WebGL)", type: "Remote", dept: "Engineering" },
-    { title: "Digital Strategist", type: "Hybrid (NY)", dept: "Marketing" },
-    { title: "Creative Director", type: "Remote", dept: "Design" }
+    { title: "Frontend Intern", type: "Remote", dept: "Engineering" },
+    { title: "Product Strategist", type: "Remote", dept: "Strategy" },
+    { title: "UI/UX Intern", type: "Remote", dept: "Design" },
+    { title: "Creative Director", type: "Remote", dept: "Design" },
+    { title: "Marketing Strategist Intern", type: "Remote", dept: "Marketing" }
   ];
 
   return (
@@ -34,9 +35,12 @@ export const Careers: React.FC = () => {
                </div>
             </div>
             
-            <button className="bg-white text-eddie-dark px-6 py-3 rounded-xl font-bold text-sm shadow-sm group-hover:scale-105 transition-all flex items-center gap-2">
+            <a 
+              href={`mailto:hr@thefinesse.co?subject=Application for ${encodeURIComponent(role.title)}`}
+              className="bg-white text-eddie-dark px-6 py-3 rounded-xl font-bold text-sm shadow-sm group-hover:scale-105 transition-all flex items-center gap-2"
+            >
               Apply Now <ArrowRightIcon className="w-4 h-4" />
-            </button>
+            </a>
           </div>
         ))}
       </div>
@@ -44,7 +48,12 @@ export const Careers: React.FC = () => {
       <div className="mt-12 p-8 bg-[#EAE8E4] rounded-[2.5rem] text-center">
         <h4 className="font-bold text-xl mb-2">Don't see your role?</h4>
         <p className="text-gray-500 mb-6">We are always open to spontaneous applications.</p>
-        <button className="text-eddie-dark font-bold underline decoration-2 hover:text-gray-600">Send us your portfolio</button>
+        <a 
+          href="mailto:hr@thefinesse.co?subject=Portfolio Submission"
+          className="text-eddie-dark font-bold underline decoration-2 hover:text-gray-600"
+        >
+          Send us your portfolio
+        </a>
       </div>
     </div>
   );

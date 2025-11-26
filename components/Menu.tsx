@@ -1,18 +1,55 @@
+'use client'
+
 import React from 'react';
+import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import { CloseIcon, ArrowUpRightIcon } from './Icons';
 
 interface MenuProps {
   isOpen: boolean;
   onClose: () => void;
-  onNavigate: (page: string) => void;
 }
 
-export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
+export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   if (!isOpen) return null;
 
-  const handleLinkClick = (page: string) => {
-    onNavigate(page);
+  const handleSectionClick = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
     onClose();
+    if (pathname !== '/') {
+      router.push(`/#${id}`);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 100;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+
+  const handleRouteClick = (path: string) => {
+    onClose();
+    router.push(path);
   };
 
   return (
@@ -38,7 +75,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
           </button>
           
           <button 
-            onClick={() => handleLinkClick('contact')}
+            onClick={() => handleRouteClick('/contact')}
             className="bg-eddie-dark text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-bold text-xs md:text-sm hover:scale-105 transition-transform duration-200"
           >
             Book a Call
@@ -59,9 +96,9 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
                 { label: 'FAQ', value: 'faq' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer flex items-center justify-between py-1">
-                  <button onClick={() => handleLinkClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
+                  <a href={`/#${item.value}`} onClick={(e) => handleSectionClick(e, item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
                     {item.label}
-                  </button>
+                  </a>
                   <ArrowUpRightIcon className="w-5 h-5 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </li>
               ))}
@@ -73,14 +110,20 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
             <h4 className="text-[#9CA3AF] text-lg md:text-xl font-medium mb-4 md:mb-6">Agency</h4>
             <ul className="space-y-2 md:space-y-3">
               {[
-                  { label: 'Vision', value: 'founders' },
-                  { label: 'Careers', value: 'careers' },
-                  { label: 'Contact', value: 'contact' }
+                  { label: 'Vision', value: 'founders', type: 'section' },
+                  { label: 'Careers', value: 'careers', type: 'section' },
+                  { label: 'Contact', value: '/contact', type: 'route' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer py-1">
-                  <button onClick={() => handleLinkClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
+                  {item.type === 'route' ? (
+                    <button onClick={() => handleRouteClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
                     {item.label}
                   </button>
+                  ) : (
+                    <a href={`/#${item.value}`} onClick={(e) => handleSectionClick(e, item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
+                      {item.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -90,12 +133,12 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
         {/* Bottom Actions */}
         <div className="mt-auto pt-4 md:pt-6 border-t border-gray-300/30 shrink-0">
           <div className="flex gap-3 items-center">
-            <button 
-              onClick={() => handleLinkClick('contact')}
-              className="flex-1 bg-[#DCDCDC]/50 hover:bg-[#DCDCDC] text-eddie-dark font-bold py-3 md:py-4 rounded-2xl transition-colors text-sm md:text-base"
+            <a 
+              href="mailto:hello@thefinesse.co"
+              className="flex-1 bg-[#DCDCDC]/50 hover:bg-[#DCDCDC] text-eddie-dark font-bold py-3 md:py-4 rounded-2xl transition-colors text-sm md:text-base text-center block"
             >
-              hello@finesse.co
-            </button>
+              hello@thefinesse.co
+            </a>
           </div>
         </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { PaletteIcon, CodeIcon, RocketIcon, SparkleIcon, ArrowRightIcon } from './Icons';
 
 export const Services: React.FC = () => {
@@ -39,30 +40,41 @@ export const Services: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service, idx) => (
-          <div 
-            key={idx} 
-            className={`
-              ${service.color} rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[350px]
-              group transition-all duration-500 hover:scale-[1.02] hover:shadow-xl cursor-pointer hover:-rotate-1
-            `}
-          >
-            <div>
-              <div className="w-16 h-16 bg-white/80 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm">
-                {service.icon}
+        {services.map((service, idx) => {
+          const serviceLinks: { [key: string]: string } = {
+            "Web Development": "/web-development",
+            "App & Software": "/app-software",
+            "Branding & Marketing": "/branding-marketing",
+            "Custom Solutions": "/contact"
+          };
+          const serviceLink = serviceLinks[service.title] || "/contact";
+          
+          return (
+            <Link 
+              key={idx}
+              href={serviceLink}
+              className={`
+                ${service.color} rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[350px]
+                group transition-all duration-500 hover:scale-[1.02] hover:shadow-xl cursor-pointer hover:-rotate-1
+              `}
+            >
+              <div>
+                <div className="w-16 h-16 bg-white/80 rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300 backdrop-blur-sm">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-eddie-dark/70 font-medium leading-relaxed">
+                  {service.desc}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="text-eddie-dark/70 font-medium leading-relaxed">
-                {service.desc}
-              </p>
-            </div>
-            
-            <div className="mt-8 flex items-center gap-2 font-bold text-sm opacity-60 group-hover:opacity-100 group-hover:gap-4 transition-all">
-              <span>View Details</span>
-              <ArrowRightIcon className="w-4 h-4" />
-            </div>
-          </div>
-        ))}
+              
+              <div className="mt-8 flex items-center gap-2 font-bold text-sm opacity-60 group-hover:opacity-100 group-hover:gap-4 transition-all">
+                <span>View Details</span>
+                <ArrowRightIcon className="w-4 h-4" />
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

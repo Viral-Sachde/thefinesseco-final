@@ -46,7 +46,11 @@ export const CaseStudies: React.FC = () => {
       {/* Cards: Vertical Stack (Grid Col 1) on Mobile, Grid 2 on Desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cases.map((project, idx) => (
-          <div key={idx} className="group cursor-pointer w-full">
+          <a 
+            key={idx} 
+            href={`mailto:hr@thefinesse.co?subject=Portfolio Inquiry - ${encodeURIComponent(project.title)}`}
+            className="group cursor-pointer w-full block"
+          >
             {/* Card Container */}
             <div className="h-full rounded-[2.2rem] bg-white md:bg-transparent border border-gray-100 md:border-none shadow-lg md:shadow-none p-4 md:p-0 transition-all hover:border-gray-200">
                 
@@ -80,7 +84,7 @@ export const CaseStudies: React.FC = () => {
                 </div>
 
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

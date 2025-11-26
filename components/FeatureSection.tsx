@@ -10,7 +10,7 @@ export const FeatureSection: React.FC = () => {
           The Unfair Advantage.
         </h2>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-          Most agencies build websites. We build revenue engines.
+          While they're building basic sites, we're building your empire. No cap.
         </p>
       </div>
 
@@ -19,13 +19,13 @@ export const FeatureSection: React.FC = () => {
         {/* The Old Way (Left) */}
         <div className="bg-gray-50 border border-gray-100 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden opacity-90">
            <div className="flex justify-between items-start mb-8 md:absolute md:top-12 md:right-12">
-             <span className="text-xs md:text-sm font-bold uppercase tracking-wide line-through decoration-red-500 decoration-2 text-gray-400">The Old Way</span>
+             <span className="text-xs md:text-sm font-bold uppercase tracking-wide line-through decoration-red-500 decoration-2 text-gray-400">Basic Agencies</span>
            </div>
            
-           <h3 className="text-3xl font-bold text-gray-300 mb-8 line-through decoration-gray-300/50">"Pretty" Websites</h3>
+           <h3 className="text-3xl font-bold text-gray-300 mb-8 line-through decoration-gray-300/50">Mid Websites</h3>
            
            <ul className="space-y-4">
-             {['Confusing Navigation', 'Slow Load Times', 'Zero SEO Strategy', 'Looks Good, Sells Nothing'].map((item, i) => (
+             {['Navigation that makes no sense', 'Takes forever to load (we timed it)', 'SEO? What SEO?', 'Looks fire, makes $0'].map((item, i) => (
                <li key={i} className="flex items-center gap-4 text-gray-400 font-medium">
                   <div className="w-6 h-6 rounded-full border border-gray-200 flex items-center justify-center shrink-0">
                     <CloseIcon className="w-3 h-3 text-gray-300" />
@@ -39,14 +39,14 @@ export const FeatureSection: React.FC = () => {
         {/* The Finesse Way (Right) */}
         <div className="bg-white border-2 border-eddie-purple rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl lg:-translate-y-8 z-10">
            
-           <h3 className="text-3xl font-bold text-eddie-dark mb-8">Profitable Systems</h3>
+           <h3 className="text-3xl font-bold text-eddie-dark mb-8">The Finesse Way</h3>
            
            <ul className="space-y-6">
              {[
-               { text: 'Neuromarketing UX', sub: 'We guide users to buy.' },
-               { text: 'Sub-Second Load Times', sub: '99/100 Google PageSpeed.' },
-               { text: 'Search Monopoly', sub: 'Rank #1 for keywords that matter.' },
-               { text: 'Cult-Like Loyalty', sub: 'Visuals that people tattoo on themselves.' }
+               { text: 'UX That Actually Converts', sub: 'We make your users want to buy (it\'s science, not magic).' },
+               { text: 'Lightning Fast Load Times', sub: 'Sub-second speeds. Google gives us 99/100. We\'re built different.' },
+               { text: 'SEO That Hits Different', sub: 'We dominate search results. Your competitors will be pressed.' },
+               { text: 'Designs People Actually Remember', sub: 'So fire, your customers might get it tattooed. No cap.' }
              ].map((item, i) => (
                <li key={i} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-eddie-purple flex items-center justify-center shrink-0 mt-1 shadow-sm">
@@ -61,7 +61,7 @@ export const FeatureSection: React.FC = () => {
            </ul>
 
            <button className="mt-10 md:mt-12 w-full bg-eddie-dark text-white py-4 rounded-xl font-bold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 shadow-lg">
-             Switch to Finesse <ArrowRightIcon className="w-4 h-4" />
+             Level Up Your Brand <ArrowRightIcon className="w-4 h-4" />
            </button>
         </div>
 

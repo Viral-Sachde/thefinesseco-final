@@ -1,12 +1,15 @@
+'use client'
+
 import React, { useState, useEffect } from 'react';
-import { SparkleIcon, MenuIcon } from './Icons';
+import Link from 'next/link';
+import Image from 'next/image';
+import { MenuIcon } from './Icons';
 
 interface HeaderProps {
   onMenuClick?: () => void;
-  onNavigate?: (page: string) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
+export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,12 +25,19 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
     <header className="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-4 md:py-8 flex justify-between items-start pointer-events-none transition-all duration-300">
       
       {/* Left Island: Logo/Home - Expands on Hover OR Scroll */}
-      <div 
+      <Link 
+        href="/"
         className="pointer-events-auto bg-[#F3F3F3] hover:bg-[#EAEAEA] transition-colors rounded-2xl p-2 flex items-center shadow-sm group cursor-pointer" 
-        onClick={() => onNavigate && onNavigate('home')}
       >
-        <div className="w-10 h-10 bg-eddie-purple/20 rounded-xl flex items-center justify-center text-eddie-dark group-hover:rotate-12 transition-transform duration-300 shrink-0 z-10 relative">
-           <SparkleIcon className="w-5 h-5 text-eddie-dark" />
+        <div className="w-10 h-10 bg-eddie-purple rounded-xl flex items-center justify-center shrink-0 z-10 relative overflow-hidden hover:animate-spin-slow">
+           <Image 
+             src="/logo/logo-white.svg" 
+             alt="The Finesse Co. Logo" 
+             width={20} 
+             height={20}
+             className="object-contain"
+             unoptimized
+           />
         </div>
         
         {/* Collapsible Text Container */}
@@ -36,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
               The Finesse Co.
             </span>
         </div>
-      </div>
+      </Link>
 
       {/* Right Island: Menu & CTA */}
       <div className="pointer-events-auto bg-[#F3F3F3] rounded-2xl p-2 flex items-center gap-2 shadow-sm">
@@ -47,12 +57,12 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
         >
           <MenuIcon className="w-5 h-5 text-eddie-dark" />
         </button>
-        <button 
-          onClick={() => onNavigate && onNavigate('contact')}
+        <Link 
+          href="/contact"
           className="hidden md:block bg-black text-white text-sm font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform duration-200 shadow-md"
         >
           Book a Call
-        </button>
+        </Link>
       </div>
     </header>
   );

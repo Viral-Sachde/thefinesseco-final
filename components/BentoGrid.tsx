@@ -16,12 +16,12 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
              <GraphIcon className="w-6 h-6 text-eddie-dark/40" />
           </div>
           <div className="self-start">
-            <span className="text-xs font-bold text-eddie-dark uppercase tracking-wide opacity-80">Digital Value</span>
+            <span className="text-xs font-bold text-eddie-dark uppercase tracking-wide opacity-80">Client Impact</span>
           </div>
           <div>
-            <h3 className="text-5xl font-bold mb-4 tracking-tighter group-hover:translate-x-2 transition-transform duration-300 text-eddie-dark">$120M+</h3>
+            <h3 className="text-5xl font-bold mb-4 tracking-tighter group-hover:translate-x-2 transition-transform duration-300 text-eddie-dark">$8.5M+</h3>
             <p className="text-lg font-bold leading-tight text-eddie-dark/80">
-              Revenue Unlocked.
+              Revenue Generated.
             </p>
           </div>
         </div>
@@ -32,8 +32,8 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
              <StarIcon className="text-eddie-dark w-8 h-8" />
            </div>
            <div>
-             <h4 className="font-bold text-2xl tracking-tight text-eddie-dark">World Class</h4>
-             <p className="text-sm font-bold text-gray-400">Awwwards x12</p>
+             <h4 className="font-bold text-2xl tracking-tight text-eddie-dark">Award Winning</h4>
+             <p className="text-sm font-bold text-gray-400">5+ Recognitions</p>
            </div>
         </div>
 
@@ -43,11 +43,11 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
              <RocketIcon className="w-5 h-5 text-eddie-dark/40" />
           </div>
           <div className="flex justify-between items-start mb-6">
-             <div className="text-eddie-dark text-xs font-bold uppercase opacity-80">Growth</div>
+             <div className="text-eddie-dark text-xs font-bold uppercase opacity-80">Performance</div>
           </div>
           <div>
-            <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">350%</h3>
-            <p className="text-eddie-dark/70 font-bold text-sm">YoY Traffic.</p>
+            <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">180%</h3>
+            <p className="text-eddie-dark/70 font-bold text-sm">Avg Growth.</p>
           </div>
         </div>
 
@@ -60,8 +60,8 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
              <div className="text-eddie-dark text-xs font-bold uppercase opacity-80">Speed</div>
           </div>
           <div>
-            <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">2 Wks</h3>
-            <p className="text-eddie-dark/70 font-bold text-sm">Avg Sprint.</p>
+            <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">3-4 Wks</h3>
+            <p className="text-eddie-dark/70 font-bold text-sm">Avg Delivery.</p>
           </div>
         </div>
 
@@ -70,9 +70,9 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
            <div className="absolute top-8 right-8 w-10 h-10 flex items-center justify-center">
              <HandshakeIcon className="w-6 h-6 text-white/40" />
            </div>
-           <p className="text-xs font-bold opacity-80 mb-2 uppercase tracking-wide">Partnerships</p>
-           <h3 className="text-5xl font-bold">5yr+</h3>
-           <p className="text-sm font-bold opacity-70">Retention.</p>
+           <p className="text-xs font-bold opacity-80 mb-2 uppercase tracking-wide">Client Success</p>
+           <h3 className="text-5xl font-bold">95%</h3>
+           <p className="text-sm font-bold opacity-70">Satisfaction Rate.</p>
         </div>
 
         {/* 6. Bottom Right (CTA) - Grey [Col 3-4, Row 2] */}

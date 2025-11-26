@@ -33,51 +33,82 @@ export const HeroCard: React.FC<HeroCardProps> = ({ onClick }) => {
         <div className="absolute inset-0 pointer-events-none z-0">
            <div className="relative w-full h-full max-w-md mx-auto">
              
-             {/* Card 1: Funding Raised - Top Left scatter */}
-             <div className="absolute top-[8%] left-[50%] -translate-x-1/2 md:translate-x-0 md:top-[40%] md:left-[15%] w-max bg-white rounded-2xl p-3 px-5 shadow-xl transform -rotate-2 md:-rotate-6 scale-90 md:scale-100 origin-center z-[1] animate-float" style={{ animationDelay: '1s' }}>
-                <div className="flex items-center gap-3 whitespace-nowrap">
-                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 shrink-0">
-                      <RocketIcon className="w-5 h-5" />
+             {/* Card 1: Client Success - Bottom Left corner */}
+             <div 
+               className="absolute top-[10%] left-[5%] md:bottom-[15%] md:left-[8%] md:top-auto w-max max-w-[200px] bg-white rounded-2xl p-3.5 shadow-2xl border border-gray-100 transform -rotate-2 md:-rotate-3 scale-90 md:scale-[0.9] origin-center z-[1] animate-float hover:shadow-3xl transition-shadow duration-300 flex-shrink-0" 
+               style={{ animationDelay: '1s' }}
+             >
+                <div className="flex items-center gap-3">
+                   <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg">
+                      <RocketIcon className="w-6 h-6" />
                    </div>
-                   <div>
-                      <p className="text-[10px] font-bold text-gray-400 uppercase leading-none mb-1">Funding Secured</p>
-                      <p className="font-bold text-eddie-dark text-sm leading-none">Series A</p>
-                   </div>
-                   <div className="ml-4 text-green-500 font-bold text-sm">$2.4M</div>
-                </div>
-             </div>
-
-             {/* Card 2: Short Testimonial - Top Right scatter */}
-             <div className="absolute top-[20%] left-[50%] -translate-x-1/2 md:translate-x-0 md:top-[30%] md:right-[15%] md:left-auto w-max bg-white rounded-2xl p-3 px-5 shadow-xl transform rotate-3 md:rotate-6 scale-90 md:scale-100 origin-center z-[2] animate-float" style={{ animationDelay: '2s' }}>
-                <div className="flex items-center gap-3 whitespace-nowrap">
-                   <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
-                      <span className="font-bold text-xs text-eddie-dark">@</span>
-                   </div>
-                   <div>
-                      <p className="text-[10px] font-bold text-gray-400 uppercase leading-none mb-1">New Comment</p>
-                      <p className="font-bold text-eddie-dark text-xs leading-none">W work team @finesse</p>
+                   <div className="flex-1 min-w-0">
+                      <p className="text-[9px] font-bold text-gray-500 uppercase leading-none mb-1 tracking-wider">Client Win</p>
+                      <p className="font-bold text-eddie-dark text-sm leading-tight mb-1">New Project</p>
+                      <p className="text-green-600 font-bold text-base leading-none">TechFlow</p>
                    </div>
                 </div>
              </div>
 
-             {/* Card 3: Long Testimonial (Focal Point) - Center/Bottom */}
-             <div className="absolute top-[32%] left-1/2 -translate-x-1/2 w-[85%] md:w-80 bg-white rounded-3xl p-5 shadow-2xl transform scale-100 md:scale-100 origin-center z-[3]
-                             md:top-[20%] group-hover:-translate-y-4 transition-transform duration-500 animate-float" style={{ animationDelay: '0s' }}>
-                <div className="flex justify-between items-start mb-3">
-                   <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-                        <span className="font-bold text-xs text-eddie-dark">SJ</span>
+             {/* Card 2: Short Testimonial - Bottom Right corner */}
+             <div 
+               className="absolute top-[45%] right-[5%] md:bottom-[15%] md:right-[8%] md:top-auto w-max max-w-[220px] bg-white rounded-2xl p-4 shadow-2xl border border-gray-100 transform rotate-3 md:rotate-4 scale-90 md:scale-[0.9] origin-center z-[2] animate-float hover:shadow-3xl transition-shadow duration-300 flex-shrink-0" 
+               style={{ animationDelay: '2s' }}
+             >
+                <div className="flex items-start gap-3">
+                   <div className="w-10 h-10 bg-gradient-to-br from-eddie-purple to-purple-600 rounded-full flex items-center justify-center shrink-0 shadow-md">
+                      <span className="font-bold text-sm text-white">@</span>
+                   </div>
+                   <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-2">
+                         <span className="font-bold text-xs text-eddie-dark">@techfounder</span>
+                         <span className="text-[10px] text-gray-400">2h</span>
                       </div>
-                      <span className="font-bold text-sm text-eddie-dark">Sarah Jenkins</span>
+                      <p className="font-bold text-eddie-dark text-sm leading-tight">W work team @finesse 🔥</p>
+                      <div className="flex items-center gap-3 mt-2 text-gray-400">
+                         <div className="flex items-center gap-1">
+                            <HeartIcon className="w-3.5 h-3.5 text-red-500" />
+                            <span className="text-[10px] font-bold">1.2k</span>
+                         </div>
+                      </div>
                    </div>
-                   <span className="text-xs text-gray-400">CEO</span>
                 </div>
-                <p className="text-sm font-medium text-gray-600 mb-3 leading-relaxed">
-                   Sales increased by <span className="text-blue-600 font-bold">200%</span> immediately after the design launch. Finesse is magic.
+             </div>
+
+             {/* Card 3: Long Testimonial (Focal Point) - Center Top */}
+             <div 
+               className="absolute top-[25%] md:top-[12%] left-1/2 -translate-x-1/2 w-96 bg-white rounded-3xl p-5 shadow-2xl border border-gray-100 transform scale-100 md:scale-100 origin-center z-[3] md:left-[50%] md:-translate-x-1/2 group-hover:-translate-y-4 transition-transform duration-500 animate-float hover:shadow-3xl flex-shrink-0" 
+               style={{ animationDelay: '0s' }}
+             >
+                <div className="flex justify-between items-start mb-3">
+                   <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md">
+                        <span className="font-bold text-sm text-white">SJ</span>
+                      </div>
+                      <div>
+                         <div className="flex items-center gap-2">
+                            <span className="font-bold text-base text-eddie-dark">Sarah Jenkins</span>
+                            <span className="text-[10px] text-gray-400">@sarahjenkins</span>
+                         </div>
+                         <span className="text-xs text-gray-500 font-medium">CEO, TechFlow Inc.</span>
+                      </div>
+                   </div>
+                   <span className="text-[10px] text-gray-400">5h</span>
+                </div>
+                <p className="text-sm font-medium text-gray-700 mb-3 leading-relaxed">
+                   Sales increased by <span className="text-blue-600 font-bold">200%</span> immediately after the design launch. Finesse is magic. 🚀
                 </p>
-                <div className="flex gap-4 text-gray-400">
-                   <div className="flex items-center gap-1"><HeartIcon className="w-4 h-4 text-red-500" /><span className="text-xs font-bold text-eddie-dark">842</span></div>
-                   <div className="flex items-center gap-1"><span className="text-xs font-bold">Reply</span></div>
+                <div className="flex items-center gap-6 text-gray-400 pt-3 border-t border-gray-100">
+                   <div className="flex items-center gap-2 hover:text-red-500 transition-colors cursor-pointer">
+                      <HeartIcon className="w-4 h-4" />
+                      <span className="text-xs font-bold">2.4k</span>
+                   </div>
+                   <div className="flex items-center gap-2 hover:text-blue-500 transition-colors cursor-pointer">
+                      <span className="text-xs font-bold">Reply</span>
+                   </div>
+                   <div className="flex items-center gap-2 hover:text-green-500 transition-colors cursor-pointer">
+                      <span className="text-xs font-bold">Share</span>
+                   </div>
                 </div>
              </div>
 

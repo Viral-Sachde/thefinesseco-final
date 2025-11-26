@@ -41,7 +41,7 @@ export const Privacy: React.FC = () => {
 
           <h3>6. Contact Us</h3>
           <p>
-            If you have any questions about this Privacy Policy, please contact us at hello@finesse.co.
+            If you have any questions about this Privacy Policy, please contact us at hello@thefinesse.co.
           </p>
         </div>
       </div>
