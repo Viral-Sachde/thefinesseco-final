@@ -39,16 +39,11 @@ export const VideoShowcase: React.FC = () => {
                 <PlayIcon className="w-6 h-6 md:w-12 md:h-12 text-white fill-current ml-1 md:ml-2" />
              </div>
           </div>
-          <div className="mt-6 flex items-center gap-2 overflow-hidden">
-             {/* Mobile: Static Position. Desktop: Animates up. */}
-             <span className="text-white font-bold tracking-[0.2em] text-xs md:text-sm uppercase translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">Watch Reel</span>
-          </div>
+          
         </div>
 
         {/* Top Bar UI - REC Removed */}
-        <div className="absolute top-0 left-0 right-0 p-6 md:p-10 flex justify-end items-start z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-           <div className="text-white/80 font-mono text-xs hidden md:block">4K • 60FPS</div>
-        </div>
+        
 
         {/* Bottom Bar UI */}
         <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-20">
