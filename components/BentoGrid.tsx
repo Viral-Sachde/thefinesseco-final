@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRightIcon, StarIcon, RocketIcon } from './Icons';
+import { ArrowUpRightIcon, StarIcon, RocketIcon, GraphIcon, BoltIcon, HandshakeIcon, SparkleIcon } from './Icons';
 
 interface BentoGridProps {
   onSelect?: (text: string) => void;
@@ -11,9 +11,12 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         
         {/* 1. Large Card (Revenue) - Lime [Col 1, Row 1-2] */}
-        <div className="group cursor-default lg:col-span-1 lg:row-span-2 bg-eddie-lime rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[320px] transition-all duration-500 hover:scale-[1.02] hover:shadow-xl">
-          <div className="bg-white/30 backdrop-blur-sm px-4 py-2 rounded-xl self-start border border-white/20 group-hover:bg-white/50 transition-colors">
-            <span className="text-xs font-bold text-eddie-dark uppercase tracking-wide">Digital Value</span>
+        <div className="group cursor-default lg:col-span-1 lg:row-span-2 bg-eddie-lime rounded-[2.5rem] p-8 flex flex-col justify-between min-h-[320px] transition-all duration-500 hover:scale-[1.02] hover:shadow-xl relative overflow-hidden">
+          <div className="absolute top-8 right-8 w-10 h-10 flex items-center justify-center">
+             <GraphIcon className="w-6 h-6 text-eddie-dark/40" />
+          </div>
+          <div className="self-start">
+            <span className="text-xs font-bold text-eddie-dark uppercase tracking-wide opacity-80">Digital Value</span>
           </div>
           <div>
             <h3 className="text-5xl font-bold mb-4 tracking-tighter group-hover:translate-x-2 transition-transform duration-300 text-eddie-dark">$120M+</h3>
@@ -35,11 +38,12 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
         </div>
 
         {/* 3. Top Middle Right (Growth) - Pink [Col 3, Row 1] */}
-        {/* Resized to col-span-1 to fit the new density */}
-        <div className="group cursor-default lg:col-span-1 bg-eddie-pink rounded-[2.5rem] p-6 flex flex-col justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl border border-transparent">
+        <div className="group cursor-default lg:col-span-1 bg-eddie-pink rounded-[2.5rem] p-6 flex flex-col justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl border border-transparent relative">
+          <div className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center">
+             <RocketIcon className="w-5 h-5 text-eddie-dark/40" />
+          </div>
           <div className="flex justify-between items-start mb-6">
-             <div className="bg-white/40 text-eddie-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Growth</div>
-             <ArrowUpRightIcon className="w-6 h-6 opacity-30 group-hover:opacity-100 transition-all duration-300 group-hover:rotate-45 text-eddie-dark" />
+             <div className="text-eddie-dark text-xs font-bold uppercase opacity-80">Growth</div>
           </div>
           <div>
             <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">350%</h3>
@@ -48,10 +52,12 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
         </div>
 
         {/* 4. Top Right (New Card: Speed) - Blue [Col 4, Row 1] */}
-        <div className="group cursor-default lg:col-span-1 bg-eddie-blue rounded-[2.5rem] p-6 flex flex-col justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl border border-transparent">
+        <div className="group cursor-default lg:col-span-1 bg-eddie-blue rounded-[2.5rem] p-6 flex flex-col justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl border border-transparent relative">
+          <div className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center">
+             <BoltIcon className="w-5 h-5 text-eddie-dark/40" />
+          </div>
           <div className="flex justify-between items-start mb-6">
-             <div className="bg-white/40 text-eddie-dark px-3 py-1 rounded-full text-xs font-bold uppercase">Speed</div>
-             <RocketIcon className="w-6 h-6 text-eddie-dark opacity-50 group-hover:opacity-100 transition-opacity" />
+             <div className="text-eddie-dark text-xs font-bold uppercase opacity-80">Speed</div>
           </div>
           <div>
             <h3 className="text-3xl font-bold tracking-tighter mb-1 text-eddie-dark">2 Wks</h3>
@@ -60,14 +66,17 @@ export const BentoGrid: React.FC<BentoGridProps> = ({ onSelect }) => {
         </div>
 
         {/* 5. Bottom Middle (Retention) - Purple [Col 2, Row 2] */}
-        <div className="group cursor-default lg:col-span-1 lg:row-span-1 bg-eddie-purple text-white rounded-[2.5rem] p-8 flex flex-col justify-end transition-all duration-500 hover:scale-[1.03] hover:shadow-xl hover:rotate-1">
+        <div className="group cursor-default lg:col-span-1 lg:row-span-1 bg-eddie-purple text-white rounded-[2.5rem] p-8 flex flex-col justify-end transition-all duration-500 hover:scale-[1.03] hover:shadow-xl hover:rotate-1 relative">
+           <div className="absolute top-8 right-8 w-10 h-10 flex items-center justify-center">
+             <HandshakeIcon className="w-6 h-6 text-white/40" />
+           </div>
            <p className="text-xs font-bold opacity-80 mb-2 uppercase tracking-wide">Partnerships</p>
            <h3 className="text-5xl font-bold">5yr+</h3>
            <p className="text-sm font-bold opacity-70">Retention.</p>
         </div>
 
         {/* 6. Bottom Right (CTA) - Grey [Col 3-4, Row 2] */}
-        <div className="group cursor-pointer lg:col-span-2 bg-[#EAEAEA] rounded-[2.5rem] p-8 flex flex-row items-center justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:bg-eddie-dark hover:text-white">
+        <div className="group cursor-pointer lg:col-span-2 bg-[#EAEAEA] rounded-[2.5rem] p-8 flex flex-row items-center justify-between transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:bg-eddie-dark hover:text-white relative">
           <div className="max-w-[70%]">
              <h3 className="text-3xl font-bold mb-2 group-hover:translate-x-2 transition-transform">Unfair Advantage</h3>
              <p className="text-sm font-bold opacity-50 group-hover:opacity-90">Book Strategy Session.</p>

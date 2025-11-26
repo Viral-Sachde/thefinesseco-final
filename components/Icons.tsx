@@ -115,3 +115,34 @@ export const BellIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-
     <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
   </svg>
 );
+
+export const GraphIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
+  </svg>
+);
+
+export const BoltIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11 21h-1l1-7H7.5c-.58 0-.57-.32-.38-.66.19-.34.05-.08.07-.12C8.48 10.94 10.42 7.54 13 3h1l-1 7h3.5c.49 0 .56.33.47.51l-.07.15C12.96 17.55 11 21 11 21z"/>
+  </svg>
+);
+
+export const HandshakeIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M10.27 10.87l2.84 2.84 2.12-2.12-2.84-2.84-2.12 2.12zm9.19-2.83l-1.06 1.06c.71.71 1.06 1.77 1.06 2.83 0 1.06-.35 2.12-1.06 2.83l-2.83 2.83c-1.57 1.57-4.09 1.57-5.66 0l-3.53-3.53-1.42 1.41 3.54 3.54c2.34 2.34 6.14 2.34 8.49 0l2.83-2.83c2.34-2.34 2.34-6.14 0-8.49l-1.06 1.06zM7.17 11.17l2.83-2.83c.78-.78.78-2.05 0-2.83-.78-.78-2.05-.78-2.83 0l-1.06 1.06-1.06-1.06 1.06-1.06c1.37-1.37 3.58-1.37 4.95 0l2.83 2.83-1.41 1.41-2.83-2.83-2.12 2.12 2.83 2.83-1.41 1.41zM16.99 6.22l-1.41-1.41-1.41 1.41 1.41 1.41 1.41-1.41z"/>
+  </svg>
+);
+
+export const CoffeeIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18.5 3H6c-1.1 0-2 .9-2 2v5.71c0 3.83 2.95 7.18 6.78 7.29 3.96.12 7.22-3.06 7.22-7V9h1.5c.83 0 1.5.67 1.5 1.5S20.33 12 19.5 12H19v2h.5c1.93 0 3.5-1.57 3.5-3.5V4.5c0-.83-.67-1.5-1.5-1.5zM16 9v2H6V5h10v4z"/>
+    <path d="M2 20h20v2H2z"/>
+  </svg>
+);
+
+export const FileIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+  </svg>
+);

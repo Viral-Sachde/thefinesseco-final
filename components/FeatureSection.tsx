@@ -37,21 +37,16 @@ export const FeatureSection: React.FC = () => {
         </div>
 
         {/* The Finesse Way (Right) */}
-        <div className="bg-white text-eddie-dark border-2 border-eddie-purple rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl lg:-translate-y-8 z-10">
-           <div className="flex justify-between items-start mb-8 md:absolute md:top-12 md:right-12">
-             <div className="bg-eddie-purple text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide shadow-sm">
-               The Finesse Way
-             </div>
-           </div>
+        <div className="bg-white border-2 border-eddie-purple rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl lg:-translate-y-8 z-10">
            
            <h3 className="text-3xl font-bold text-eddie-dark mb-8">Profitable Systems</h3>
            
            <ul className="space-y-6">
              {[
-               { text: 'Psychology-Driven UX', sub: 'We guide users to buy.' },
-               { text: 'Performance First', sub: '99/100 Google PageSpeed.' },
-               { text: 'SEO Domination', sub: 'Rank #1 for keywords that matter.' },
-               { text: 'Brand Cultivation', sub: 'Visuals that people tattoo on themselves.' }
+               { text: 'Neuromarketing UX', sub: 'We guide users to buy.' },
+               { text: 'Sub-Second Load Times', sub: '99/100 Google PageSpeed.' },
+               { text: 'Search Monopoly', sub: 'Rank #1 for keywords that matter.' },
+               { text: 'Cult-Like Loyalty', sub: 'Visuals that people tattoo on themselves.' }
              ].map((item, i) => (
                <li key={i} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-eddie-purple flex items-center justify-center shrink-0 mt-1 shadow-sm">

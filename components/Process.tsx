@@ -27,7 +27,7 @@ export const Process: React.FC = () => {
                  <div className={`w-64 h-80 ${step.color} rounded-[2rem] p-8 flex flex-col justify-between group transition-transform duration-300 hover:scale-[1.02] hover:-rotate-1 shadow-sm`}>
                     <div className="flex justify-between items-start">
                        <span className="font-bold text-4xl opacity-20">0{idx + 1}</span>
-                       <div className="w-10 h-10 bg-white/40 rounded-full flex items-center justify-center backdrop-blur-sm">
+                       <div className="w-10 h-10 flex items-center justify-center">
                           {step.icon}
                        </div>
                     </div>

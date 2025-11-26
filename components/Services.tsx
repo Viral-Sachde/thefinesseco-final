@@ -4,27 +4,27 @@ import { PaletteIcon, CodeIcon, RocketIcon, SparkleIcon, ArrowRightIcon } from '
 export const Services: React.FC = () => {
   const services = [
     {
-      icon: <PaletteIcon className="w-8 h-8" />,
-      title: "Brand Identity",
-      desc: "We craft memorable visual systems that tell your story. From logos to comprehensive brand guidelines.",
-      color: "bg-[#F9FCD0]"
-    },
-    {
       icon: <CodeIcon className="w-8 h-8" />,
-      title: "Web Engineering",
+      title: "Web Development",
       desc: "Robust, scalable, and lightning-fast websites built with modern technologies (React, Next.js, WebGL).",
       color: "bg-[#E3F2FD]"
     },
     {
       icon: <RocketIcon className="w-8 h-8" />,
-      title: "Growth Strategy",
-      desc: "Data-driven marketing campaigns, SEO optimization, and conversion rate optimization (CRO).",
+      title: "App & Software",
+      desc: "Custom applications, SaaS platforms, and digital products engineered for scale and performance.",
       color: "bg-[#E0DEFA]"
     },
     {
+      icon: <PaletteIcon className="w-8 h-8" />,
+      title: "Branding & Marketing",
+      desc: "Memorable visual systems and data-driven growth strategies that tell your story.",
+      color: "bg-[#F9FCD0]"
+    },
+    {
       icon: <SparkleIcon className="w-8 h-8" />,
-      title: "UX/UI Design",
-      desc: "User-centric interfaces that delight and convert. We design for usability and aesthetic perfection.",
+      title: "Custom Solutions",
+      desc: "Tailored digital transformation consulting for complex enterprise needs.",
       color: "bg-[#F4F4F4]"
     }
   ];

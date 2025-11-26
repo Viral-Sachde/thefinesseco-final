@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                </h2>
                <div className="flex flex-col sm:flex-row gap-4">
                  <button 
-                    onClick={() => onNavigate('pricing')}
+                    onClick={() => onNavigate('contact')}
                     className="bg-eddie-dark text-white px-8 py-4 rounded-2xl font-bold hover:bg-gray-800 transition-colors hover:scale-105 duration-200 shadow-lg"
                  >
                    Book a Call
@@ -57,16 +57,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="pt-12 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
             <p className="text-gray-400 font-medium text-sm">
               © {new Date().getFullYear()} The Finesse Co. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-               <a href="#" className="text-sm font-bold hover:underline decoration-eddie-purple text-gray-600">Privacy Policy</a>
-               <a href="#" className="text-sm font-bold hover:underline decoration-eddie-purple text-gray-600">Terms of Service</a>
-               <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200">
+            <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+               <button onClick={() => onNavigate('privacy')} className="text-sm font-bold hover:underline decoration-eddie-purple text-gray-600">Privacy Policy</button>
+               <button onClick={() => onNavigate('terms')} className="text-sm font-bold hover:underline decoration-eddie-purple text-gray-600">Terms of Service</button>
+               <div className="flex items-center gap-2 bg-gray-50 px-3 py-1.5 rounded-full border border-gray-200 w-fit">
                   <GlobeIcon className="w-4 h-4 text-gray-400" />
-                  <span className="text-xs font-bold text-gray-500">Global Agency</span>
+                  <span className="text-xs font-bold text-gray-500 whitespace-nowrap">Global Agency</span>
                </div>
             </div>
           </div>

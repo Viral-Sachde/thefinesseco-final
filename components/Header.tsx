@@ -48,7 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, onNavigate }) => {
           <MenuIcon className="w-5 h-5 text-eddie-dark" />
         </button>
         <button 
-          onClick={() => onNavigate && onNavigate('pricing')}
+          onClick={() => onNavigate && onNavigate('contact')}
           className="hidden md:block bg-black text-white text-sm font-bold px-6 py-3 rounded-xl hover:scale-105 transition-transform duration-200 shadow-md"
         >
           Book a Call

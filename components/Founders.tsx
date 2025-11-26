@@ -1,4 +1,5 @@
 import React from 'react';
+import { GlobeIcon, RocketIcon, BoltIcon, GraphIcon } from './Icons';
 
 export const Founders: React.FC = () => {
   return (
@@ -10,62 +11,86 @@ export const Founders: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
         
-        {/* Founder Card 1 */}
-        <div className="bg-white border border-gray-200 p-4 rounded-[2rem] hover:rotate-1 transition-transform duration-300 shadow-sm hover:shadow-xl">
-           <div className="w-full aspect-[4/5] bg-eddie-gray rounded-[1.5rem] mb-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-200 to-gray-300 flex items-center justify-center">
-                 <span className="text-8xl grayscale opacity-50">👨‍💻</span>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl">
-                 <div className="flex justify-between items-end">
-                    <div>
-                       <h3 className="text-2xl font-bold leading-none">Alex Finesse</h3>
-                       <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">Tech Lead</p>
-                    </div>
-                    <div className="text-3xl">⚡️</div>
+        {/* Founder Card 1: Viral Sachde */}
+        <div className="relative group hover:rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A]">
+           
+           {/* Immersive Background Gradient */}
+           <div className="absolute inset-0 bg-gradient-to-br from-[#2A2A2A] to-[#121212] flex items-center justify-center">
+             <div className="w-64 h-64 bg-white/5 rounded-full blur-[80px]"></div>
+           </div>
+
+           {/* Gradient Overlay for Text Visibility */}
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+           <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
+              <div className="flex justify-between items-end mb-6">
+                 <div>
+                    <h3 className="text-3xl font-bold leading-none mb-2 text-white">Viral Sachde</h3>
+                    <p className="text-sm font-bold uppercase tracking-widest opacity-60 text-gray-300">Founder</p>
                  </div>
               </div>
-           </div>
-           
-           {/* Stats Grid */}
-           <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#F9F9F9] p-4 rounded-2xl">
-                 <p className="text-xs text-gray-400 font-bold uppercase mb-1">Coffee / Day</p>
-                 <p className="text-2xl font-bold">5 Cups</p>
-              </div>
-              <div className="bg-eddie-purple-light p-4 rounded-2xl">
-                 <p className="text-xs text-eddie-purple font-bold uppercase mb-1">Superpower</p>
-                 <p className="text-2xl font-bold text-eddie-dark">WebGL</p>
+              
+              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                       <GlobeIcon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-bold uppercase tracking-wide opacity-50 mb-0.5">Global Partners</p>
+                        <p className="text-lg font-bold">40+</p>
+                    </div>
+                 </div>
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                       <GraphIcon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-bold uppercase tracking-wide opacity-50 mb-0.5">Superpower</p>
+                        <p className="text-lg font-bold text-white">Scale</p>
+                    </div>
+                 </div>
               </div>
            </div>
         </div>
 
-        {/* Founder Card 2 */}
-        <div className="bg-white border border-gray-200 p-4 rounded-[2rem] hover:-rotate-1 transition-transform duration-300 shadow-sm hover:shadow-xl md:mt-12">
-           <div className="w-full aspect-[4/5] bg-eddie-pink rounded-[1.5rem] mb-6 relative overflow-hidden">
-               <div className="absolute inset-0 bg-gradient-to-b from-pink-100 to-pink-200 flex items-center justify-center">
-                 <span className="text-8xl grayscale opacity-50">👩‍🎨</span>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-xl">
-                 <div className="flex justify-between items-end">
-                    <div>
-                       <h3 className="text-2xl font-bold leading-none">Sarah Logic</h3>
-                       <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mt-1">Design Lead</p>
-                    </div>
-                    <div className="text-3xl">🎨</div>
+        {/* Founder Card 2: Bhautik Prajapati */}
+        <div className="relative group hover:-rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A] md:mt-12">
+           
+            {/* Immersive Background Gradient */}
+           <div className="absolute inset-0 bg-gradient-to-br from-[#202020] to-[#0A0A0A] flex items-center justify-center">
+             <div className="w-64 h-64 bg-white/5 rounded-full blur-[80px]"></div>
+           </div>
+
+           {/* Gradient Overlay */}
+           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+
+           <div className="absolute bottom-0 left-0 right-0 p-8 text-white z-10">
+              <div className="flex justify-between items-end mb-6">
+                 <div>
+                    <h3 className="text-3xl font-bold leading-none mb-2 text-white">Bhautik Prajapati</h3>
+                    <p className="text-sm font-bold uppercase tracking-widest opacity-60 text-gray-300">Co-Founder</p>
                  </div>
               </div>
-           </div>
-           
-           {/* Stats Grid */}
-           <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[#F9F9F9] p-4 rounded-2xl">
-                 <p className="text-xs text-gray-400 font-bold uppercase mb-1">Figma Files</p>
-                 <p className="text-2xl font-bold">999+</p>
-              </div>
-              <div className="bg-eddie-mint p-4 rounded-2xl">
-                 <p className="text-xs text-teal-600 font-bold uppercase mb-1">Superpower</p>
-                 <p className="text-2xl font-bold text-eddie-dark">Vibes</p>
+              
+              <div className="grid grid-cols-2 gap-4 border-t border-white/10 pt-4">
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                       <RocketIcon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-bold uppercase tracking-wide opacity-50 mb-0.5">Products Shipped</p>
+                        <p className="text-lg font-bold">80+</p>
+                    </div>
+                 </div>
+                 <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                        <BoltIcon className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                        <p className="text-[10px] font-bold uppercase tracking-wide opacity-50 mb-0.5">Superpower</p>
+                        <p className="text-lg font-bold text-white">Systems</p>
+                    </div>
+                 </div>
               </div>
            </div>
         </div>

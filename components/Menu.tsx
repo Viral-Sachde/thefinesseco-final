@@ -25,7 +25,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
 
       {/* Menu Card */}
       <div 
-        className="pointer-events-auto absolute top-4 right-4 md:right-6 md:top-6 w-[calc(100vw-32px)] md:w-full md:max-w-[440px] bg-[#EAE8E4] rounded-[2rem] p-5 md:p-8 flex flex-col shadow-2xl animate-scale-in-tr origin-top-right max-h-[calc(100vh-32px)] overflow-hidden"
+        className="pointer-events-auto absolute top-4 right-4 md:right-6 md:top-6 w-[calc(100vw-32px)] md:w-full md:max-w-[440px] bg-[#EAE8E4] rounded-[2rem] p-5 md:p-8 flex flex-col shadow-2xl animate-scale-in-tr origin-top-right max-h-[calc(100vh-32px)] overflow-hidden transition-all duration-500 ease-out"
       >
         
         {/* Top Bar inside Menu */}
@@ -38,7 +38,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
           </button>
           
           <button 
-            onClick={() => handleLinkClick('pricing')}
+            onClick={() => handleLinkClick('contact')}
             className="bg-eddie-dark text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full font-bold text-xs md:text-sm hover:scale-105 transition-transform duration-200"
           >
             Book a Call
@@ -74,7 +74,8 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
             <ul className="space-y-2 md:space-y-3">
               {[
                   { label: 'Vision', value: 'founders' },
-                  { label: 'Careers', value: 'careers' }
+                  { label: 'Careers', value: 'careers' },
+                  { label: 'Contact', value: 'contact' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer py-1">
                   <button onClick={() => handleLinkClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
@@ -89,7 +90,10 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose, onNavigate }) => {
         {/* Bottom Actions */}
         <div className="mt-auto pt-4 md:pt-6 border-t border-gray-300/30 shrink-0">
           <div className="flex gap-3 items-center">
-            <button className="flex-1 bg-[#DCDCDC]/50 hover:bg-[#DCDCDC] text-eddie-dark font-bold py-3 md:py-4 rounded-2xl transition-colors text-sm md:text-base">
+            <button 
+              onClick={() => handleLinkClick('contact')}
+              className="flex-1 bg-[#DCDCDC]/50 hover:bg-[#DCDCDC] text-eddie-dark font-bold py-3 md:py-4 rounded-2xl transition-colors text-sm md:text-base"
+            >
               hello@finesse.co
             </button>
           </div>
