@@ -33,25 +33,13 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="font-bold text-sm uppercase text-gray-400 tracking-wider">Company</label>
-              <input 
-                type="text" 
-                placeholder="Acme Inc." 
-                className="w-full bg-white p-4 rounded-xl border border-gray-200 focus:border-eddie-purple focus:ring-2 focus:ring-eddie-purple/20 outline-none transition-all font-medium"
-              />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-bold text-sm uppercase text-gray-400 tracking-wider">Budget Range</label>
-              <select className="w-full bg-white p-4 rounded-xl border border-gray-200 focus:border-eddie-purple focus:ring-2 focus:ring-eddie-purple/20 outline-none transition-all font-medium text-eddie-dark">
-                <option value="">Select a range</option>
-                <option value="10-25k">$10k - $25k</option>
-                <option value="25-50k">$25k - $50k</option>
-                <option value="50-100k">$50k - $100k</option>
-                <option value="100k+">$100k+</option>
-              </select>
-            </div>
+          <div className="flex flex-col gap-2">
+            <label className="font-bold text-sm uppercase text-gray-400 tracking-wider">Company</label>
+            <input 
+              type="text" 
+              placeholder="Acme Inc." 
+              className="w-full bg-white p-4 rounded-xl border border-gray-200 focus:border-eddie-purple focus:ring-2 focus:ring-eddie-purple/20 outline-none transition-all font-medium"
+            />
           </div>
 
           <div className="flex flex-col gap-2">

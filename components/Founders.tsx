@@ -9,10 +9,11 @@ export const Founders: React.FC = () => {
         <p className="text-xl text-gray-500">We don't do corporate speak. We just ship greatness.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+      {/* Grid - Cards stand together (equal height, side by side) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
         
         {/* Founder Card 1: Viral Sachde */}
-        <div className="relative group hover:rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A]">
+        <div className="relative group hover:rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg min-h-[500px] border border-gray-100 bg-[#1A1A1A]">
            
            {/* Immersive Background Gradient */}
            <div className="absolute inset-0 bg-gradient-to-br from-[#2A2A2A] to-[#121212] flex items-center justify-center">
@@ -54,7 +55,7 @@ export const Founders: React.FC = () => {
         </div>
 
         {/* Founder Card 2: Bhautik Prajapati */}
-        <div className="relative group hover:-rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A] md:mt-12">
+        <div className="relative group hover:-rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg min-h-[500px] border border-gray-100 bg-[#1A1A1A]">
            
             {/* Immersive Background Gradient */}
            <div className="absolute inset-0 bg-gradient-to-br from-[#202020] to-[#0A0A0A] flex items-center justify-center">
@@ -96,6 +97,27 @@ export const Founders: React.FC = () => {
         </div>
 
       </div>
+
+      {/* General Vision Section */}
+      <div className="w-full bg-eddie-dark text-white rounded-[2.5rem] p-8 md:p-16 border border-gray-800 text-center relative overflow-hidden group">
+        
+        {/* Background Effects */}
+        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-eddie-purple/20 blur-[100px] rounded-full opacity-50"></div>
+        <div className="absolute bottom-0 left-0 w-[40%] h-[40%] bg-eddie-lime/10 blur-[80px] rounded-full opacity-50"></div>
+
+        <div className="relative z-10">
+            <span className="text-eddie-purple font-bold tracking-widest uppercase text-xs md:text-sm mb-6 block">The Philosophy</span>
+            <h3 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[0.9] tracking-tighter">
+            We don't build software.<br/>
+            We engineer <span className="italic font-serif text-eddie-purple">obsession.</span>
+            </h3>
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed font-medium">
+            Bridging the gap between art and engineering.
+            We exist to create digital experiences that feel like magic and perform like machines.
+            </p>
+        </div>
+      </div>
+
     </div>
   );
 };

@@ -34,34 +34,34 @@ export const HeroCard: React.FC<HeroCardProps> = ({ onClick }) => {
            <div className="relative w-full h-full max-w-md mx-auto">
              
              {/* Card 1: Funding Raised - Top Left scatter */}
-             <div className="absolute top-[8%] left-[50%] -translate-x-1/2 md:translate-x-0 md:top-[40%] md:left-[15%] w-56 md:w-64 bg-white rounded-2xl p-4 shadow-xl transform -rotate-2 md:-rotate-6 scale-75 md:scale-100 origin-center z-[1] animate-float" style={{ animationDelay: '1s' }}>
-                <div className="flex items-center gap-3">
-                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+             <div className="absolute top-[8%] left-[50%] -translate-x-1/2 md:translate-x-0 md:top-[40%] md:left-[15%] w-max bg-white rounded-2xl p-3 px-5 shadow-xl transform -rotate-2 md:-rotate-6 scale-90 md:scale-100 origin-center z-[1] animate-float" style={{ animationDelay: '1s' }}>
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                   <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 shrink-0">
                       <RocketIcon className="w-5 h-5" />
                    </div>
                    <div>
-                      <p className="text-xs font-bold text-gray-400 uppercase">Funding Secured</p>
-                      <p className="font-bold text-eddie-dark">Series A</p>
+                      <p className="text-[10px] font-bold text-gray-400 uppercase leading-none mb-1">Funding Secured</p>
+                      <p className="font-bold text-eddie-dark text-sm leading-none">Series A</p>
                    </div>
-                   <div className="ml-auto text-green-500 font-bold text-sm">$2.4M</div>
+                   <div className="ml-4 text-green-500 font-bold text-sm">$2.4M</div>
                 </div>
              </div>
 
              {/* Card 2: Short Testimonial - Top Right scatter */}
-             <div className="absolute top-[22%] left-[55%] -translate-x-1/2 md:translate-x-0 md:top-[30%] md:right-[15%] md:left-auto w-56 md:w-64 bg-white rounded-2xl p-4 shadow-xl transform rotate-3 md:rotate-6 scale-75 md:scale-100 origin-center z-[2] animate-float" style={{ animationDelay: '2s' }}>
-                <div className="flex items-center gap-3">
-                   <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+             <div className="absolute top-[20%] left-[50%] -translate-x-1/2 md:translate-x-0 md:top-[30%] md:right-[15%] md:left-auto w-max bg-white rounded-2xl p-3 px-5 shadow-xl transform rotate-3 md:rotate-6 scale-90 md:scale-100 origin-center z-[2] animate-float" style={{ animationDelay: '2s' }}>
+                <div className="flex items-center gap-3 whitespace-nowrap">
+                   <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
                       <span className="font-bold text-xs text-eddie-dark">@</span>
                    </div>
                    <div>
-                      <p className="text-xs font-bold text-gray-400 uppercase">New Comment</p>
-                      <p className="font-bold text-eddie-dark text-xs">W work team @finesse</p>
+                      <p className="text-[10px] font-bold text-gray-400 uppercase leading-none mb-1">New Comment</p>
+                      <p className="font-bold text-eddie-dark text-xs leading-none">W work team @finesse</p>
                    </div>
                 </div>
              </div>
 
              {/* Card 3: Long Testimonial (Focal Point) - Center/Bottom */}
-             <div className="absolute top-[38%] left-1/2 -translate-x-1/2 w-64 md:w-80 bg-white rounded-3xl p-5 shadow-2xl transform scale-90 md:scale-100 origin-center z-[3]
+             <div className="absolute top-[32%] left-1/2 -translate-x-1/2 w-[85%] md:w-80 bg-white rounded-3xl p-5 shadow-2xl transform scale-100 md:scale-100 origin-center z-[3]
                              md:top-[20%] group-hover:-translate-y-4 transition-transform duration-500 animate-float" style={{ animationDelay: '0s' }}>
                 <div className="flex justify-between items-start mb-3">
                    <div className="flex items-center gap-2">
@@ -70,10 +70,10 @@ export const HeroCard: React.FC<HeroCardProps> = ({ onClick }) => {
                       </div>
                       <span className="font-bold text-sm text-eddie-dark">Sarah Jenkins</span>
                    </div>
-                   <span className="text-xs text-gray-400">Founder</span>
+                   <span className="text-xs text-gray-400">CEO</span>
                 </div>
                 <p className="text-sm font-medium text-gray-600 mb-3 leading-relaxed">
-                   Honestly insane. Our valuation just hit <span className="text-blue-600 font-bold">$10M</span> after the rebrand. The ROI is absurd. 
+                   Sales increased by <span className="text-blue-600 font-bold">200%</span> immediately after the design launch. Finesse is magic.
                 </p>
                 <div className="flex gap-4 text-gray-400">
                    <div className="flex items-center gap-1"><HeartIcon className="w-4 h-4 text-red-500" /><span className="text-xs font-bold text-eddie-dark">842</span></div>
