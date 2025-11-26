@@ -34,7 +34,7 @@ export const CaseStudies: React.FC = () => {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 overflow-hidden">
+    <div className="w-full max-w-6xl mx-auto px-4 pb-12">
       <div className="mb-12 md:mb-16 text-center">
          <span className="bg-eddie-purple/20 text-eddie-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-4 inline-block">Selected Work</span>
          <h2 className="text-4xl md:text-6xl font-bold mb-6">Our Masterpieces</h2>
@@ -43,7 +43,7 @@ export const CaseStudies: React.FC = () => {
          </p>
       </div>
 
-      {/* Cards: Vertical Grid on Mobile (Stacked), Grid on Desktop */}
+      {/* Cards: Vertical Stack (Grid Col 1) on Mobile, Grid 2 on Desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cases.map((project, idx) => (
           <div key={idx} className="group cursor-pointer w-full">
@@ -66,11 +66,11 @@ export const CaseStudies: React.FC = () => {
                 <div className="px-2 md:px-4 flex-1 flex flex-col">
                   {/* Header Row */}
                   <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-                    <h3 className="text-2xl md:text-3xl font-bold leading-tight truncate max-w-full">{project.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold leading-tight truncate max-w-full min-w-0">{project.title}</h3>
                     <span className="text-xs font-bold border border-gray-200 px-3 py-1 rounded-full bg-gray-50 shrink-0">{project.stats}</span>
                   </div>
                   
-                  <p className="text-gray-500 font-medium mb-4 text-base leading-relaxed">{project.desc}</p>
+                  <p className="text-gray-500 font-medium mb-4 text-base leading-relaxed line-clamp-2">{project.desc}</p>
                   
                   <div className="mt-auto">
                      <span className="text-xs font-bold text-eddie-purple uppercase tracking-wide bg-eddie-purple/10 px-3 py-1.5 rounded-lg inline-block">

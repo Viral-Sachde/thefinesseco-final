@@ -98,13 +98,11 @@ export const Pricing: React.FC = () => {
         <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6">Strategic Investment</h2>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">Choose the package that fits your stage of growth.</p>
         
-        {/* Category Tabs - Scrollable on mobile with Fade Effect */}
+        {/* Category Tabs - Scrollable on mobile */}
         <div className="relative w-full flex justify-center">
-            {/* Fade Gradients for "Scroll Tape" effect */}
-            <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none md:hidden"></div>
-            <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none md:hidden"></div>
+            {/* Removed Gradients to fix spacing visibility issue */}
             
-            <div className="inline-flex bg-gray-100 p-1.5 rounded-full mb-8 md:mb-12 relative overflow-x-auto max-w-full no-scrollbar snap-x">
+            <div className="inline-flex bg-gray-100 p-2 rounded-full mb-8 md:mb-12 relative overflow-x-auto max-w-full no-scrollbar snap-x">
                 {(['Web', 'App', 'Branding'] as PricingCategory[]).map((tab) => (
                     <button
                     key={tab}
