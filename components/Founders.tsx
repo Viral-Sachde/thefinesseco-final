@@ -1,5 +1,5 @@
 import React from 'react';
-import { GlobeIcon, RocketIcon, BoltIcon, GraphIcon } from './Icons';
+import { GlobeIcon, RocketIcon, BoltIcon, GraphIcon, CoffeeIcon, FileIcon } from './Icons';
 
 export const Founders: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ export const Founders: React.FC = () => {
         <p className="text-xl text-gray-500">We don't do corporate speak. We just ship greatness.</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
         
         {/* Founder Card 1: Viral Sachde */}
         <div className="relative group hover:rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A]">
@@ -54,7 +54,7 @@ export const Founders: React.FC = () => {
         </div>
 
         {/* Founder Card 2: Bhautik Prajapati */}
-        <div className="relative group hover:-rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A] md:mt-12">
+        <div className="relative group hover:-rotate-1 transition-transform duration-300 rounded-[2.5rem] overflow-hidden shadow-lg h-[500px] border border-gray-100 bg-[#1A1A1A]">
            
             {/* Immersive Background Gradient */}
            <div className="absolute inset-0 bg-gradient-to-br from-[#202020] to-[#0A0A0A] flex items-center justify-center">

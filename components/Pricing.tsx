@@ -10,7 +10,7 @@ export const Pricing: React.FC = () => {
     Web: [
       {
         name: 'Starter',
-        price: '$2,000',
+        price: '$1,000',
         desc: 'Essential web presence for emerging brands.',
         color: 'bg-eddie-pink',
         features: ['Responsive Landing Page', 'Basic SEO Setup', 'CMS Integration', '2 Rounds of Revisions', '1 Week Support'],
@@ -18,7 +18,7 @@ export const Pricing: React.FC = () => {
       },
       {
         name: 'Pro',
-        price: '$3,500',
+        price: '$2,000',
         desc: 'High-performance site for growth-focused businesses.',
         color: 'bg-eddie-purple',
         textColor: 'text-white',
@@ -39,7 +39,7 @@ export const Pricing: React.FC = () => {
     App: [
       {
         name: 'MVP',
-        price: '$3,000',
+        price: '$5,000',
         desc: 'Rapid prototype to validate your idea.',
         color: 'bg-[#F9FCD0]',
         features: ['Core Features Impl.', 'React Native / Web App', 'Basic Database', 'UI/UX Design', '2 Week Sprint'],
@@ -47,7 +47,7 @@ export const Pricing: React.FC = () => {
       },
       {
         name: 'Scale',
-        price: '$5,000',
+        price: '$7,000',
         desc: 'Full-featured application for scaling users.',
         color: 'bg-eddie-blue',
         textColor: 'text-eddie-dark',
@@ -75,7 +75,7 @@ export const Pricing: React.FC = () => {
       },
       {
         name: 'Growth',
-        price: '$4,500',
+        price: '$3,500',
         desc: 'Comprehensive marketing and strategy.',
         color: 'bg-eddie-purple',
         textColor: 'text-white',
@@ -96,23 +96,25 @@ export const Pricing: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4">
+    <div className="w-full max-w-6xl mx-auto px-4 mb-24">
       <div className="mb-12 text-center">
         <span className="text-eddie-purple font-bold tracking-wider uppercase text-sm">Investment Tiers</span>
         <h2 className="text-4xl md:text-6xl font-bold mt-4 mb-6">Transparent Pricing</h2>
         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">Choose the package that fits your stage of growth.</p>
         
-        {/* Category Tabs */}
-        <div className="inline-flex bg-gray-100 p-1.5 rounded-full mb-12 relative">
-           {(['Web', 'App', 'Branding'] as PricingCategory[]).map((tab) => (
-             <button
-               key={tab}
-               onClick={() => setActiveTab(tab)}
-               className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 z-10 ${activeTab === tab ? 'bg-white text-eddie-dark shadow-md scale-105' : 'text-gray-500 hover:text-eddie-dark'}`}
-             >
-               {tab === 'Web' ? 'Web Development' : tab === 'App' ? 'App / Software' : 'Branding & Growth'}
-             </button>
-           ))}
+        {/* Category Tabs - Scrollable on mobile */}
+        <div className="flex justify-center w-full">
+            <div className="inline-flex bg-gray-100 p-1.5 rounded-full mb-12 relative overflow-x-auto max-w-full no-scrollbar">
+            {(['Web', 'App', 'Branding'] as PricingCategory[]).map((tab) => (
+                <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 py-2 rounded-full text-sm font-bold transition-all duration-300 z-10 whitespace-nowrap ${activeTab === tab ? 'bg-white text-eddie-dark shadow-md scale-105' : 'text-gray-500 hover:text-eddie-dark'}`}
+                >
+                {tab === 'Web' ? 'Web Development' : tab === 'App' ? 'App / Software' : 'Branding & Growth'}
+                </button>
+            ))}
+            </div>
         </div>
       </div>
 
@@ -121,7 +123,7 @@ export const Pricing: React.FC = () => {
         {pricingData[activeTab].map((plan, idx) => (
           <div 
             key={idx} 
-            className={`${plan.color} ${plan.textColor || 'text-eddie-dark'} rounded-[2.5rem] p-8 flex flex-col hover:scale-[1.02] transition-all duration-300 shadow-sm relative`}
+            className={`${plan.color} ${plan.textColor || 'text-eddie-dark'} rounded-[2.5rem] p-8 flex flex-col hover:scale-[1.02] transition-all duration-300 shadow-sm relative min-h-[500px]`}
           >
             {plan.popular && (
                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white text-eddie-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase shadow-lg flex items-center gap-1">
