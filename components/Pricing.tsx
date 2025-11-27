@@ -42,7 +42,7 @@ export const Pricing: React.FC = () => {
         name: 'MVP',
         desc: 'Rapid prototype to validate your idea.',
         color: 'bg-[#F9FCD0]',
-        features: ['Core Features Impl.', 'React Native / Web App', 'Basic Database', 'UI/UX Design', '2 Week Sprint'],
+        features: ['Core Features Impl.', 'React Native / Web App', 'Basic Database', 'UI/UX Design', '4 Week Sprint'],
         btnText: 'Build MVP'
       },
       {

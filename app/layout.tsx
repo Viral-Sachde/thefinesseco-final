@@ -1,5 +1,9 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
+
+export const viewport: Viewport = {
+  themeColor: '#B0A9F8',
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://thefinesse.co'),
@@ -23,7 +27,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  themeColor: '#B0A9F8',
   icons: {
     icon: '/icon.svg',
     apple: '/apple-icon.svg',

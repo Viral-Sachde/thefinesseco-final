@@ -89,17 +89,50 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
             <h4 className="text-[#9CA3AF] text-lg md:text-xl font-medium mb-4 md:mb-6">Explore</h4>
             <ul className="space-y-2 md:space-y-3">
               {[
-                { label: 'Services', value: 'services' },
-                { label: 'Process', value: 'process' },
-                { label: 'Case Studies', value: 'cases' },
-                { label: 'Pricing', value: 'pricing' },
-                { label: 'FAQ', value: 'faq' }
+                { label: 'How We Work', value: '/services/how-it-works', type: 'route' },
+                { label: 'Process', value: 'process', type: 'section' },
+                { label: 'Vision', value: 'philosophy', type: 'section' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer flex items-center justify-between py-1">
-                  <a href={`/#${item.value}`} onClick={(e) => handleSectionClick(e, item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
+                  {item.type === 'route' ? (
+                    <>
+                      <button onClick={() => handleRouteClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
+                        {item.label}
+                      </button>
+                      <ArrowUpRightIcon className="w-5 h-5 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </>
+                  ) : (
+                    <>
+                      <a href={`/#${item.value}`} onClick={(e) => handleSectionClick(e, item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight flex-1 text-left">
+                        {item.label}
+                      </a>
+                      <ArrowUpRightIcon className="w-5 h-5 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Section */}
+          <div className="mb-6 md:mb-10">
+            <h4 className="text-[#9CA3AF] text-lg md:text-xl font-medium mb-4 md:mb-6">Services</h4>
+            <ul className="space-y-2 md:space-y-3">
+              {[
+                  { label: 'Web Development', value: '/services/web-development', type: 'route' },
+                  { label: 'App & Software', value: '/services/app-software', type: 'route' },
+                  { label: 'Branding & Marketing', value: '/services/branding-marketing', type: 'route' }
+              ].map((item) => (
+                <li key={item.label} className="group cursor-pointer py-1">
+                  {item.type === 'route' ? (
+                    <button onClick={() => handleRouteClick(item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
                     {item.label}
-                  </a>
-                  <ArrowUpRightIcon className="w-5 h-5 md:w-6 md:h-6 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </button>
+                  ) : (
+                    <a href={`/#${item.value}`} onClick={(e) => handleSectionClick(e, item.value)} className="text-2xl md:text-3xl font-bold text-eddie-dark group-hover:text-gray-600 transition-colors tracking-tight text-left block w-full">
+                      {item.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -110,9 +143,9 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
             <h4 className="text-[#9CA3AF] text-lg md:text-xl font-medium mb-4 md:mb-6">Agency</h4>
             <ul className="space-y-2 md:space-y-3">
               {[
-                  { label: 'Vision', value: 'founders', type: 'section' },
                   { label: 'Careers', value: 'careers', type: 'section' },
-                  { label: 'Contact', value: '/contact', type: 'route' }
+                  { label: 'Contact', value: '/contact', type: 'route' },
+                  { label: 'FAQ', value: 'faq', type: 'section' }
               ].map((item) => (
                 <li key={item.label} className="group cursor-pointer py-1">
                   {item.type === 'route' ? (

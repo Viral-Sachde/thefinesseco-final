@@ -24,8 +24,8 @@ export const Services: React.FC = () => {
     },
     {
       icon: <SparkleIcon className="w-8 h-8" />,
-      title: "Custom Solutions",
-      desc: "Tailored digital transformation consulting for complex enterprise needs.",
+      title: "How We Work",
+      desc: "4-week sprints, obsessive communication, and zero corporate jargon. Direct access to talent, rapid development.",
       color: "bg-[#F4F4F4]"
     }
   ];
@@ -42,10 +42,10 @@ export const Services: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((service, idx) => {
           const serviceLinks: { [key: string]: string } = {
-            "Web Development": "/web-development",
-            "App & Software": "/app-software",
-            "Branding & Marketing": "/branding-marketing",
-            "Custom Solutions": "/contact"
+            "Web Development": "/services/web-development",
+            "App & Software": "/services/app-software",
+            "Branding & Marketing": "/services/branding-marketing",
+            "How We Work": "/services/how-it-works"
           };
           const serviceLink = serviceLinks[service.title] || "/contact";
           

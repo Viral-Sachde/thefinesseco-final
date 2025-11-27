@@ -19,6 +19,8 @@ import { Founders } from '../components/Founders';
 import { VideoShowcase } from '../components/VideoShowcase';
 import { Philosophy } from '../components/Philosophy';
 
+export const dynamic = 'force-static'
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

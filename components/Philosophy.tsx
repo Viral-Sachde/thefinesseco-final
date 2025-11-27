@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Philosophy: React.FC = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4">
+    <div id="philosophy" className="w-full max-w-6xl mx-auto px-4">
       <div className="w-full bg-eddie-dark text-white rounded-[2.5rem] p-8 md:p-16 border border-gray-800 text-center relative overflow-hidden group">
         
         {/* Background Effects */}

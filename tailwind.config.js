@@ -35,6 +35,11 @@ module.exports = {
         'float': 'float 6s ease-in-out infinite',
         'scale-in-tr': 'scaleInTr 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         'spin-slow': 'spinRounds 2s cubic-bezier(0.4, 0, 0.2, 1) forwards',
+        'gravity': 'gravity 0.6s ease-in forwards',
+        'drawPath': 'drawPath 2s ease-out forwards',
+        'drawStroke': 'drawStroke 2s ease-out forwards',
+        'fadeInScale': 'fadeInScale 0.5s ease-out forwards',
+        'slideInBounce': 'slideInBounce 0.8s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -56,6 +61,28 @@ module.exports = {
         spinRounds: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(720deg)' },
+        },
+        gravity: {
+          '0%': { transform: 'translateY(0) rotate(0deg)', opacity: '1' },
+          '50%': { transform: 'translateY(100px) rotate(5deg)', opacity: '0.5' },
+          '100%': { transform: 'translateY(200px) rotate(10deg)', opacity: '0' },
+        },
+        drawPath: {
+          '0%': { opacity: '0', transform: 'scaleY(0)' },
+          '100%': { opacity: '1', transform: 'scaleY(1)' },
+        },
+        drawStroke: {
+          '0%': { strokeDashoffset: '200', opacity: '0' },
+          '100%': { strokeDashoffset: '0', opacity: '1' },
+        },
+        fadeInScale: {
+          '0%': { opacity: '0', transform: 'scale(0)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        slideInBounce: {
+          '0%': { opacity: '0', transform: 'translateX(50%) translateY(-50%) scale(0)' },
+          '50%': { opacity: '1', transform: 'translateX(50%) translateY(-50%) scale(1.2)' },
+          '100%': { opacity: '1', transform: 'translateX(50%) translateY(-50%) scale(1)' },
         }
       }
     },

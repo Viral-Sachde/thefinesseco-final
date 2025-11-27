@@ -12,31 +12,8 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
-        ],
-      },
-    ]
-  },
+  // Headers removed - not compatible with static export
+  // Configure headers at hosting/CDN level instead
 }
 
 module.exports = nextConfig
