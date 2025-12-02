@@ -1,6 +1,7 @@
 {
+  "buildCommand": "npm run build",
   "outputDirectory": "out",
-  "cleanUrls": false,
+  "installCommand": "npm install",
   "rewrites": [
     {
       "source": "/services/:path*",
