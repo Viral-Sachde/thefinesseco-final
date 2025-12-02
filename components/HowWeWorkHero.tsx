@@ -1,6 +1,11 @@
 import React from 'react';
+import { ArrowRightIcon } from './Icons';
 
-export const HowWeWorkHero: React.FC = () => {
+interface HowWeWorkHeroProps {
+  onNavigate: (page: string) => void;
+}
+
+export const HowWeWorkHero: React.FC<HowWeWorkHeroProps> = ({ onNavigate }) => {
   return (
     <div className="text-center mb-24">
       <span className="bg-[#F4F4F4] text-eddie-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-6 inline-block">The Philosophy</span>
@@ -20,6 +25,11 @@ export const HowWeWorkHero: React.FC = () => {
       <p className="text-xl md:text-2xl text-gray-500 max-w-3xl mx-auto font-medium">
         We ditched the agency bloat. You get direct access to the talent, rapid sprints, and zero corporate jargon.
       </p>
+      <div className="mt-8 md:mt-10 flex justify-center">
+        <button onClick={() => onNavigate('contact')} className="bg-eddie-dark text-white px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-bold text-sm md:text-base hover:scale-105 transition-transform flex items-center gap-2 md:gap-3 shadow-lg">
+          Work With Us <ArrowRightIcon className="w-4 h-4 md:w-5 md:h-5" />
+        </button>
+      </div>
     </div>
   );
 };

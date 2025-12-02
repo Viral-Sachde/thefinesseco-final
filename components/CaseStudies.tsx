@@ -1,4 +1,7 @@
+'use client'
+
 import React from 'react';
+import Link from 'next/link';
 import { ArrowUpRightIcon } from './Icons';
 
 export const CaseStudies: React.FC = () => {
@@ -38,17 +41,23 @@ export const CaseStudies: React.FC = () => {
       <div className="mb-12 md:mb-16 text-center">
          <span className="bg-eddie-purple/20 text-eddie-dark px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-4 inline-block">Selected Work</span>
          <h2 className="text-4xl md:text-6xl font-bold mb-6">Our Masterpieces</h2>
-         <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+         <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-8">
            A curated selection of projects where strategy meets aesthetic perfection.
          </p>
+         <Link
+           href="/work"
+           className="inline-flex items-center gap-2 bg-eddie-dark text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg"
+         >
+           View Our Work <ArrowUpRightIcon className="w-5 h-5" />
+         </Link>
       </div>
 
       {/* Cards: Vertical Stack (Grid Col 1) on Mobile, Grid 2 on Desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cases.map((project, idx) => (
-          <a 
+          <Link 
             key={idx} 
-            href={`mailto:hr@thefinesse.co?subject=Portfolio Inquiry - ${encodeURIComponent(project.title)}`}
+            href="/work"
             className="group cursor-pointer w-full block"
           >
             {/* Card Container */}
@@ -58,7 +67,7 @@ export const CaseStudies: React.FC = () => {
                 <div className={`w-full aspect-video md:aspect-[4/3] rounded-[1.8rem] md:rounded-[2.5rem] ${project.image} mb-6 relative overflow-hidden transition-transform duration-500 group-hover:scale-[1.02] shadow-sm group-hover:shadow-xl`}>
                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="bg-white rounded-full px-6 py-3 font-bold text-eddie-dark flex items-center gap-2 shadow-lg">
-                        View Case Study <ArrowUpRightIcon className="w-4 h-4" />
+                        View Our Work <ArrowUpRightIcon className="w-4 h-4" />
                       </div>
                    </div>
                    
@@ -84,7 +93,7 @@ export const CaseStudies: React.FC = () => {
                 </div>
 
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>

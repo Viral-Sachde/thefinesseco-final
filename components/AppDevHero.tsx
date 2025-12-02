@@ -1,6 +1,11 @@
 import React from 'react';
+import { ArrowRightIcon } from './Icons';
 
-export const AppDevHero: React.FC = () => {
+interface AppDevHeroProps {
+  onNavigate: (page: string) => void;
+}
+
+export const AppDevHero: React.FC<AppDevHeroProps> = ({ onNavigate }) => {
   return (
     <div className="text-center mb-12 sm:mb-16">
       <span className="bg-[#E0DEFA] text-eddie-dark px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wide mb-4 sm:mb-6 inline-block">App & SaaS</span>
@@ -19,6 +24,11 @@ export const AppDevHero: React.FC = () => {
       <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 max-w-3xl mx-auto font-medium px-4">
         From MVP to IPO. We engineer robust software architectures designed to handle millions of users without blinking.
       </p>
+      <div className="mt-8 sm:mt-10 md:mt-12 flex justify-center px-4">
+        <button onClick={() => onNavigate('contact')} className="bg-eddie-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base hover:scale-105 transition-transform flex items-center gap-2 sm:gap-3 shadow-lg">
+          Build Your SaaS <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+        </button>
+      </div>
     </div>
   );
 };

@@ -72,10 +72,10 @@ export const Footer: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24">
               <div className="flex flex-col gap-6">
                 <h4 className="font-bold text-gray-400 uppercase text-xs tracking-wider">Socials</h4>
-                <a href="#" className="font-bold hover:text-eddie-purple transition-colors">Instagram</a>
-                <a href="#" className="font-bold hover:text-eddie-purple transition-colors">Twitter / X</a>
-                <a href="#" className="font-bold hover:text-eddie-purple transition-colors">LinkedIn</a>
-                <a href="#" className="font-bold hover:text-eddie-purple transition-colors">Dribbble</a>
+                <a href="https://instagram.com/thefinesseco" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-eddie-purple transition-colors">Instagram</a>
+                <a href="https://twitter.com/thefinesseco" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-eddie-purple transition-colors">Twitter / X</a>
+                <a href="https://linkedin.com/company/thefinesseco" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-eddie-purple transition-colors">LinkedIn</a>
+                <a href="https://dribbble.com/thefinesseco" target="_blank" rel="noopener noreferrer" className="font-bold hover:text-eddie-purple transition-colors">Dribbble</a>
               </div>
               <div className="flex flex-col gap-6">
                 <h4 className="font-bold text-gray-400 uppercase text-xs tracking-wider">Company</h4>

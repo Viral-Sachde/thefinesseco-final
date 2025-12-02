@@ -16,7 +16,7 @@ export const Branding: React.FC<BrandingProps> = ({ onNavigate }) => {
   return (
     <div className="w-full animate-fade-in pt-32 pb-20">
       <div className="max-w-6xl mx-auto px-4">
-        <BrandingHero />
+        <BrandingHero onNavigate={onNavigate} />
         <BrandingMoodboard />
         <BrandingDeliverables />
         <BrandingNeuromarketing />

@@ -1,6 +1,47 @@
 {
-  "buildCommand": "npm run build",
   "outputDirectory": "out",
-  "installCommand": "npm install"
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/services/:path*",
+      "destination": "/services/:path*.html"
+    },
+    {
+      "source": "/services/:path*/",
+      "destination": "/services/:path*.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/terms/",
+      "destination": "/terms.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/privacy/",
+      "destination": "/privacy.html"
+    },
+    {
+      "source": "/work",
+      "destination": "/work.html"
+    },
+    {
+      "source": "/work/",
+      "destination": "/work.html"
+    }
+  ]
 }
 

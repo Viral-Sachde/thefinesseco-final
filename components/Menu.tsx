@@ -90,6 +90,7 @@ export const Menu: React.FC<MenuProps> = ({ isOpen, onClose }) => {
             <ul className="space-y-2 md:space-y-3">
               {[
                 { label: 'How We Work', value: '/services/how-it-works', type: 'route' },
+                { label: 'View Our Work', value: '/work', type: 'route' },
                 { label: 'Process', value: 'process', type: 'section' },
                 { label: 'Vision', value: 'philosophy', type: 'section' }
               ].map((item) => (

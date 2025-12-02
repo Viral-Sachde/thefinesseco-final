@@ -1,7 +1,11 @@
+'use client'
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowRightIcon, CheckIcon, CloseIcon } from './Icons';
 
 export const FeatureSection: React.FC = () => {
+  const router = useRouter();
   return (
     <div className="w-full max-w-6xl mx-auto px-4 mt-16 mb-24 animate-slide-up" style={{ animationDelay: '0.2s' }}>
       
@@ -60,7 +64,7 @@ export const FeatureSection: React.FC = () => {
              ))}
            </ul>
 
-           <button className="mt-10 md:mt-12 w-full bg-eddie-dark text-white py-4 rounded-xl font-bold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 shadow-lg">
+           <button onClick={() => router.push('/contact')} className="mt-10 md:mt-12 w-full bg-eddie-dark text-white py-4 rounded-xl font-bold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 shadow-lg">
              Level Up Your Brand <ArrowRightIcon className="w-4 h-4" />
            </button>
         </div>

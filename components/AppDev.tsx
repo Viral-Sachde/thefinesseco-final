@@ -14,7 +14,7 @@ export const AppDev: React.FC<AppDevProps> = ({ onNavigate }) => {
   return (
     <div className="w-full animate-fade-in pt-20 sm:pt-24 md:pt-32 pb-12 sm:pb-16 md:pb-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <AppDevHero />
+        <AppDevHero onNavigate={onNavigate} />
       </div>
       
       {/* Module 2: Tech Stack Marquee */}
